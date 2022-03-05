@@ -26,3 +26,22 @@ $ az vm create --resource-group az104-grp --name demovm --image win2019datacente
 $ New-AzVm -ResourceGroupName az104-grp -Name demovm -Location northeurope -Image win2019datacenter
 ```
 
+### Adding Data Disks to VM VM with Power Shell
+```powershell
+$resourcegroup = 'az-104'
+$machinename = 'enrico-win-vm'
+$location = 'North Europe'
+$storageType = 'Standard_LRS'
+$dataDiskName = 'newdisk01'
+$dataDiskSize = 10
+ 
+$datadiskConfig = New-AzDiskConfig -SkuName $storageType -Location $location -CreateOption Empty -DiskSizeGB $dataDiskSize
+ 
+$dataDisk01 = New-AzDisk -DiskName $dataDiskName -Disk $datadiskConfig -ResourceGroupName $resourcegroup
+ 
+$vm = Get-AzVM -Name $machinename -ResourceGroupName $resourcegroup
+ 
+$vm = Add-AzVMDataDisk -VM $vm -Name $dataDiskName -CreateOption Attach -ManagedDiskId $dataDisk01.Id -Lun 1
+ 
+Update-AzVM -VM $vm -ResourceGroupName $resourcegroup
+```
