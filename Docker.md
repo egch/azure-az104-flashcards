@@ -6,7 +6,7 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 $ docker --version
 ```
 ## Publishing to the Azure Container Registry
-### DockerFile
+### Dockerfile
 ```Dockerfile
 FROM nginx:latest
 COPY ./index.html /usr/share/nginx/html/index.html
