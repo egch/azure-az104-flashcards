@@ -1,0 +1,31 @@
+#### Failed tests
+
+
+- Administrative Units -> 258 DONE
+- resource lock: -> where to apply 263 DONE
+- resource tag: -> where to apply  260  DONE
+- Azure storage account: GRS/ZRS etc  196/210  DONE
+- Azure Conditional Access Policies  256 DONE
+
+- public domain: NS vs A record 189  DONE
+- Basic SKU IP / load balancer - 120  DONE
+---- question 25
+- arm template copy - 347 DONE
+- vpn sites/ virtual WAN - 162
+- update domains/availability set
+- Log analytic workspace query
+- load balancer pre requisites
+- arm template VN
+- blob life cycle mgmt
+- calico network policies
+- kubectl cli
+- virtual network peering connection
+- kubectl cli
+- Load balancer basic SKU
+- Recovery Service Vault and location
+- policy
+- rdp / udp
+- network interface x virtual machine
+- proximity placement group
+- file.core.windows.net
+- azure virtual network
