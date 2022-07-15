@@ -9,3 +9,5 @@ $ Connect-AzAccount
 $ New-AzResourceGroupDeployment -ResourceGroupName arm-grp --TemplateFile arm/arm-storage-account.json
 
 ```
+## ARM copy
+see [copy](arm/arm-storage-account_copy.json)
