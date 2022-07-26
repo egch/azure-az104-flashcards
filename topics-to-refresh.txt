@@ -12,7 +12,7 @@
 ---- question 25
 - arm template copy - 347 DONE
 - vpn sites/ virtual WAN - 162
-- update domains/availability set
+- update domains/availability set - 44
 - Log analytic workspace query
 - load balancer pre requisites
 - arm template VN
