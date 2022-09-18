@@ -15,6 +15,10 @@ Configure and manage virtual networking
     - Health Probes: TCP, HTTP, HTTPS
     - Support for availability zones
 
+
+### Varie
+NAT - Network Address Tranlation
+
 ## Virtual Network Peering
 - Virtual Network Peering is used to connect two Azure virtual networks together via the backbone network.
 
@@ -25,6 +29,11 @@ Configure and manage virtual networking
 - You can also peer virtual networks that are located across different subscriptions.
 
 - The virtual networks can't have overlapping CIDR blocks.
+
+## DNS
+
+## Quick topics
+**Virtual Appliance**: Azure network virtual appliance is used in the Azure application to enhance high availability. It is used as an advanced level of control over traffic flows, such as when building a demilitarized zone (DMZ) in the cloud.
 
 
 
