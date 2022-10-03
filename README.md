@@ -1,5 +1,12 @@
 # azure-az104-flashcards
 Exam AZ-104: Microsoft Azure Administrator - flashcards
+## Chapters
+[Manage Azure Identities](ManageAzureIdentities.md)
+
+[Storage Accounts](StorageAccounts.md)
+
+[Networking](networking.md)
+
 ## Azure VM
 
 ### Build a Linux VM

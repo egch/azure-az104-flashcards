@@ -28,6 +28,8 @@
 
 ### AD Custom Domains
 TBD
+### AAD Devices
+VM: login with AAD
 ### Password Reset
 Only with AD P1 or P2
 ### Users
@@ -44,6 +46,6 @@ Only with AD P1 or P2
     - read only locks
     - delete locks
 - Azure Policy service
-- Management Groups
+- Management Groups: each management group can have one or more subscriptions 
 
 
