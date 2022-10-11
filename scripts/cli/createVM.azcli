@@ -1,0 +1,11 @@
+az vm create --resource-group az-104-cli --name appvm --image Win2019Datacenter --public-ip-sku Basic --admin-username enrico_azure
+az vm create --vnet-name myVN  --subnet subnetA --resource-group az-104-cli --name appvm --image Win2019Datacenter --public-ip-sku Basic --admin-username xxenrico_azure
+
+# list of the sizes available for my location
+az vm list-sizes --location "North Europe"
+
+### Delete VM ###
+az vm delete --name appvym --resource-group az-104-cli
+
+### specifying size for a vm
+az vm create --name "appvm" --resource-group "az-104-cli" --admin-username "enrico_azure" --image "Win2019Datacenter" --size "Standard_DS2_v2" --subnet "SubnetA" --vnet-name "app-network"

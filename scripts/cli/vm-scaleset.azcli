@@ -1,0 +1,2 @@
+# create a new VM scaleset
+az vmss create --name egch-scaleset --resource-group az-104-cli --admin-username enrico_azure --image Win2019Datacenter --vm-sku Standard_DS2_v2

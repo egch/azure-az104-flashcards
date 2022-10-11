@@ -24,4 +24,18 @@ You need a Recovery Service vault in the same location
 - File-System consistent
 - Crash consistent
 
-File recovery
+### Backup Restore
+- File Restore
+- VM Restore (need a storage account in the same location):
+    - new VM
+    - replace existing
+#### Deleting Recovery Services vault
+<ol>
+<li>From Properties of the Recovery Services Vault select: Security Settings.</li>
+<li>Backup items: delete backup data</li>
+<li>Delete Recovery Services vault</li>
+</ol>
+
+### Backup Retention
+### Mars Agent Installer
+### Azure file share backup

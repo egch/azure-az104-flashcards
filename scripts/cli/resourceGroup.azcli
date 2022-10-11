@@ -1,0 +1,8 @@
+# Create a resource group
+az group create --name az-104-cli --location 'NorthEurope'
+
+#list all the resource groups
+az group list
+
+#delete a resource group
+az group delete --name az-104y-cli 

@@ -1,0 +1,8 @@
+# show all the storages in the account
+az storage account list
+
+# create a new storage account
+az storage account create -n egchsa -g az-104-cli -l northeurope --sku Standard_LRS
+
+# create a container within the storage account
+az storage container create -n mycontainer --account-name egchsa

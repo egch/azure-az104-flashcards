@@ -1,0 +1,5 @@
+# create a new appservice plan
+az appservice plan create --name egchasp --resource-group az-104-cli  --sku F1
+
+# create a new webapp within the appservice plan
+az webapp create --name egchwa --plan egchasp --resource-group az-104-cli

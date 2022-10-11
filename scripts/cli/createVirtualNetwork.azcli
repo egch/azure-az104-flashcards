@@ -1,0 +1,11 @@
+# create a new virtual network
+az network vnet create --name cli-network --resource-group az-104-cli --subnet-name SubnetA --address-prefixes 10.0.0.0/16
+
+# get details of an existing virtual network
+az network vnet show -g az-104-cli -n cli-network
+
+# show all the virtual networks
+az network vnet list
+
+# create a subnet within an existing virtual network
+az network vnet subnet create --name SubnetB --address-prefixes 10.0.1.0/24 --resource-group az-104-cli --vnet-name cli-network

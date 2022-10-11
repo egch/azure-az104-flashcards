@@ -10,10 +10,7 @@ Exam AZ-104: Microsoft Azure Administrator - flashcards
 [Monitor & Backup](Monitor&Backup.md)
 
 [Azure CLI](az-cli.md)
-
 [Powershell](Powershell.md)
-
-[ARM Templates](ARM-Templates.md)
 
 ## Azure VM
 

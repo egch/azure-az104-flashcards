@@ -1,0 +1,9 @@
+# create a new disk
+az disk create --name data-disk --resource-group az-104-cli --location "North Europe" --size-gb 8
+
+# get info abt the new data disk created
+$id=az disk show --name data-disk --resource-group az-104-cli --query id
+
+# attach the data disk to the vm
+az vm disk attach --vm-name appvm --lun 0 --resource-group az-104-cli --ids $id
+echo $id
