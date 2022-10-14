@@ -3,8 +3,8 @@
 
 ```powershell
 $ pwsh
-$ PS > Connect-AzAccount
-$ New-AzResourceGroupDeployment -ResourceGroupName arm-grp -TemplateFile scripts/arm/arm-variable.json
+$ PS> Connect-AzAccount
+$ PS> New-AzResourceGroupDeployment -ResourceGroupName arm-grp -TemplateFile scripts/arm/arm-variable.json
 ```
 ## Template format
 ```json
@@ -28,11 +28,22 @@ $ New-AzResourceGroupDeployment -ResourceGroupName arm-grp -TemplateFile scripts
 - build with the editor
 - save
 
+
 ## Scripts
 Other scripts can be found [here](scripts/arm).
 
+## Elements
+Extract the id of that specific resource.
+```json
+"id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'enrico-vn', 'subnet1')]" 
+```
+
+
 ## Various
-BICEP base templates
+- BICEP base templates
+- API version
+- depends on (another resource)
+
 
 ## Links
 [Understand the structure and syntax of ARM template](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/syntax)
