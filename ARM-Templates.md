@@ -33,10 +33,57 @@ $ PS> New-AzResourceGroupDeployment -ResourceGroupName arm-grp -TemplateFile scr
 Other scripts can be found [here](scripts/arm).
 
 ## Elements
+### Resource id
 Extract the id of that specific resource.
 ```json
 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'enrico-vn', 'subnet1')]" 
 ```
+### Resource Group location
+```json
+"location": "[resourceGroup().location]",
+```
+### Variables
+```json
+ "variables": {
+        "resourceLocation" : "North Europe"
+    },
+    "resources": [
+        {           
+            "name": "storage",
+            "type": "Microsoft.Storage/storageAccounts",
+            "location":"[variables('resourceLocation')]",
+
+        }
+```
+## Parameters
+If you do not pass at runtime the value, then default value is taken.
+```json
+   "parameters": {
+            "storage-sku": {
+                "type": "string",
+                "defaultValue":"Standard_LRS",
+                "allowedValues": [
+                    "Standard_LRS","Standard_GRS","Standard_RAGRS"
+                ]
+            }
+    },
+    "resources": [
+        {           
+          ...
+
+            "sku" :{
+                "name": "[parameters('storage-sku')]"
+            },
+        }
+            ]
+```
+Complete file is [here](scripts/arm/arm-storage-with-parameters.json)
+
+You can either using Azure Portal o pass the parameter with another file:
+```powershell
+$ PS>  New-AzResourceGroupDeployment -ResourceGroupName az-104 -TemplateFile ./scripts/arm/arm-storage-with-parameters.json -TemplateParameterFile ./scripts/arm/parameter.json
+```
+
 
 
 ## Various
