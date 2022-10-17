@@ -131,8 +131,8 @@
                 },
                 "osProfile": {
                     "computerName": "egchvm",
-                    "adminUsername": "adminUsername",
-                    "adminPassword": "adminPassword"
+                    "adminUsername": "username",
+                    "adminPassword": "password"
                 },
                 "storageProfile": {
                     "imageReference": {
