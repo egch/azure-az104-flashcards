@@ -97,10 +97,12 @@ $ PS>  New-AzResourceGroupDeployment -ResourceGroupName az-104 -TemplateFile ./s
 
 
 
+
 ## Various
 - BICEP base templates
 - API version
 - depends on (another resource)
+- [Custom Scripts Extension](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/custom-script-windows)
 
 
 ## Links
