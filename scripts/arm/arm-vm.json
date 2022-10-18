@@ -1,7 +1,14 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {},
+    "parameters": {
+        "vmpassowrd":{
+            "type": "securestring",
+            "metadata": {
+                "description": "Please type the password"
+            }
+        }
+    },
     "functions": [],
     "variables": {},
     "resources": [
@@ -132,7 +139,7 @@
                 "osProfile": {
                     "computerName": "egchvm",
                     "adminUsername": "username",
-                    "adminPassword": "password"
+                    "adminPassword": "[parameters('vmpassowrd')]"
                 },
                 "storageProfile": {
                     "imageReference": {

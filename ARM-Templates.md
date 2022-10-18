@@ -83,6 +83,17 @@ You can either using Azure Portal o pass the parameter with another file:
 ```powershell
 $ PS>  New-AzResourceGroupDeployment -ResourceGroupName az-104 -TemplateFile ./scripts/arm/arm-storage-with-parameters.json -TemplateParameterFile ./scripts/arm/parameter.json
 ```
+### securestring
+```json
+"parameters": {
+        "vmpassowrd":{
+            "type": "securestring",
+            "metadata": {
+                "description": "Please type the password"
+            }
+        }
+    },
+```
 
 
 
