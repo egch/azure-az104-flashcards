@@ -69,3 +69,6 @@ Update-AzVM -VM $vm -ResourceGroupName $resourcegroup
 
 ## Credits
 [Rodrigues AZ-104](https://www.udemy.com/course/microsoft-certified-azure-administrator/)
+
+## Online
+This contents can be seen online [here](https://egch.github.io/azure-az104-flashcards/)
