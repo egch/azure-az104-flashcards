@@ -7,6 +7,8 @@ Exam AZ-104: Microsoft Azure Administrator - flashcards
 
 [Networking](networking.md)
 
+[Docker](Docker.md)
+
 [Monitor & Backup](Monitor&Backup.md)
 
 [Azure CLI](az-cli.md)
@@ -14,6 +16,10 @@ Exam AZ-104: Microsoft Azure Administrator - flashcards
 [Powershell](Powershell.md)
 
 [ARM Templates](ARM-Templates.md)
+
+[Resource locks](resource-locks.md)
+
+[Section 3](Section3.md)
 
 ## Azure VM
 
