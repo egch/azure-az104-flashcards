@@ -15,6 +15,16 @@ Configure and manage virtual networking
     - Health Probes: TCP, HTTP, HTTPS
     - Support for availability zones
 
+## Network Security Group
+You can use an Azure network security group to filter network traffic between Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources. For each rule, you can specify source and destination, port, and protocol.
+
+NSG can be attached to:
+- Network interface
+- subnet
+- VM
+
+## Network Interface
+ A network interface enables an Azure Virtual Machine to communicate with internet, Azure, and on-premises resources. A virtual machine created with the Azure portal, has one network interface with default settings. 
 
 ### Varie
 NAT - Network Address Tranlation

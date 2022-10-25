@@ -14,6 +14,8 @@ You can send data from on premise VM to LAW (agent mgmt)
 
 
 ## Application Insights
+[Azure Application Insights Tutorial | Amazing telemetry service](https://www.youtube.com/watch?v=A0jAeGf2zUQ&t=541s)
+
 ## Backup Service
 You need a Recovery Service vault in the same location
 - backup policy

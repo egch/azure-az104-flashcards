@@ -36,9 +36,14 @@ Only with AD P1 or P2
 - Invite Guest Users
 - create bulk users
 - Multi Factor Authentication
+### Administrative Units
+Administrative units restrict permissions in a role to any portion of your organization that you define. You could, for example, use administrative units to delegate the Helpdesk Administrator role to regional support specialists, so they can manage users only in the region that they support.
+
+*You can create a new administrative unit by using either the Azure portal, PowerShell or Microsoft Graph.*
+
 ### Various
 - Conditional Access Policies - only with AAD P2
-- Administrative Units
+
 - Resource Tags
 - Moving resources across resource groups
 - Moving resources across subscriptions

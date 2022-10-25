@@ -19,7 +19,7 @@ Exam AZ-104: Microsoft Azure Administrator - flashcards
 
 [Resource locks](resource-locks.md)
 
-[Section 3](Section3.md)
+[Deploy and Manage Azure compute resources](Section3.md)
 
 ## Azure VM
 
@@ -69,6 +69,8 @@ Update-AzVM -VM $vm -ResourceGroupName $resourcegroup
 
 ## Credits
 [Rodrigues AZ-104](https://www.udemy.com/course/microsoft-certified-azure-administrator/)
+
+[Azure documentation](https://learn.microsoft.com/en-us/azure)
 
 ## Online
 This contents can be seen online [here](https://egch.github.io/azure-az104-flashcards/)
