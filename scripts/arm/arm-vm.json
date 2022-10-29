@@ -2,6 +2,12 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "vmusername":{
+            "type": "string",
+            "metadata": {
+                "description": "Please type the username"
+            }
+        },
         "vmpassowrd":{
             "type": "securestring",
             "metadata": {
@@ -138,7 +144,8 @@
                 },
                 "osProfile": {
                     "computerName": "egchvm",
-                    "adminUsername": "username",
+
+                    "adminUsername": "[parameters('vmusername')]",
                     "adminPassword": "[parameters('vmpassowrd')]"
                 },
                 "storageProfile": {

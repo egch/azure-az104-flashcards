@@ -1,7 +1,17 @@
 # Section 3 - Deploy and Manage Azure compute resources
+## Availability Set
+- fault domains
+- update domains
+## Azure Bastion
+## App Service Plan
+- Shared: custom domain,
+- Basic: custom domain,
+- Standard: custom domain, Auto-scaling, Virtual Network connectivity
+## Docker
+[Docker](Docker.md)
 ## Installing nginx
 
-```bash
+```shell
 $ ssh user@ip
 vm-ubuntu$ sudo apt-get update
 vm-ubuntu$ sudo apt-get install nginx
@@ -9,13 +19,13 @@ vm-ubuntu$ sudo apt-get install nginx
 Add the port 80 as Inbound port rules in the vm.
 
 ## Accessing VM with SSH keys
-```bash
+```shell
 $ chmod 400 vm-ubuntu-ssh_key.cer
 $ ssh -i vm-ubuntu-ssh_key.cer enrico@13.79.186.11
 
 ```
 ## Disks Snapshot
-
+TBD
 ## Custom Script Extensions
 The Custom Script Extension downloads and runs scripts on Azure virtual machines (VMs). This extension is useful for post-deployment configuration, software installation, or any other configuration or management task. You can download scripts from Azure Storage or GitHub, or provide them to the Azure portal at extension runtime.
 
@@ -35,6 +45,22 @@ The Custom Script Extension integrates with Azure Resource Manager templates. Yo
 Follow the same steps as described [here](#Lab-Custom-Script-Extenson-web-server-Windows) to deploy this [file](scripts/custom-script-extension/install-nginx.sh) in order to install nginx on a ubuntu vm.
 
 ## Azure Kubernetes
+- kubelet
+- container runtime
+### Azure Kubernetes Lab
+1. Kubernetes Service (create)
+2. create the [deplyment.yml](configuration/kubernetes/deployment.yml) & [service.yml](configuration/kubernetes/service.yml).
+3. kubernetes/Workloads - add deplyment.yml](configuration/kubernetes/deployment.yml) and [service.yml](configuration/kubernetes/service.yml).
+4. appcluster/Services and Ingresses
+5. app-service with ip and running on external ip (load balancer)
+
+## Azure Containier Instances
+- enable admin user on container registry
+- can connect to either azure registry or docker hub
+### Azure Containier Groups
+
+
+
 
 
 
