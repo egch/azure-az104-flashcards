@@ -1,5 +1,55 @@
 # Networking
 Configure and manage virtual networking
+
+## CIDR Notation
+```
+10.0.0.0/24
+10.0.0.0/16
+```
+- 192.0.2.0 -> reserved for network id
+- 192.0.2.255 -> reserved for broadcast id
+
+| IP   |      Subnet Mask    |  CCIDR |
+|----------|:-------------:|------:|
+| 192.0.2.0 |  255.255.255.0 | 192.0.2.0/24 |
+| 192.0.2.0 |    255.255.0.0   |   192.0.2.0/16 |
+
+
+
+## Public IP address 
+- Static IP
+- Dynamic IP
+### SKU
+- Standard (static IP)
+- Basic
+
+Basic SKU: If you are creating a public IP address in a region that supports availability zones, the Availability zone setting is set to None by default. Basic Public IPs do not support Availability zones.
+Standard SKU: A Standard SKU public IP can be associated to a virtual machine or a load balancer front end.
+
+## Network Interface
+ A network interface enables an Azure Virtual Machine to communicate with internet, Azure, and on-premises resources. A virtual machine created with the Azure portal, has one network interface with default settings. 
+
+- A VM must have at least one network interface attached to it.
+- Region of the NI should be the same as the VM (verify)
+- A VM can only have as many network interfaces attached to it as the VM size supports.
+- NI can be applied to VM or subnet (verify)
+
+## Network Security Group - NSG
+You can use an Azure network security group to filter network traffic between Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources. For each rule, you can specify source and destination, port, and protocol.
+
+- Inbound rules
+- Outbound rules
+
+NSG can be attached to:
+- Network interface - :white_check_mark:
+- subnet - :white_check_mark:
+- VM - :white_check_mark:
+- NO to all the virtual network -  :x:
+
+
+
+
+
 ## Load Balancer
 ### SKU
 - Basic Load Balancer:
@@ -15,18 +65,11 @@ Configure and manage virtual networking
     - Health Probes: TCP, HTTP, HTTPS
     - Support for availability zones
 
-## Network Security Group
-You can use an Azure network security group to filter network traffic between Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources. For each rule, you can specify source and destination, port, and protocol.
 
-NSG can be attached to:
-- Network interface
-- subnet
-- VM
 
-## Network Interface
- A network interface enables an Azure Virtual Machine to communicate with internet, Azure, and on-premises resources. A virtual machine created with the Azure portal, has one network interface with default settings. 
 
-### Varie
+
+### Varius
 NAT - Network Address Tranlation
 
 ## Virtual Network Peering
