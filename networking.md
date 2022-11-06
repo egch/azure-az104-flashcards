@@ -41,10 +41,17 @@ You can use an Azure network security group to filter network traffic between Az
 - Outbound rules
 
 NSG can be attached to:
-- Network interface - :white_check_mark:
-- subnet - :white_check_mark:
-- VM - :white_check_mark:
-- NO to all the virtual network -  :x:
+
+|  Resource | Can be attached | 
+|:----------|-------------:|
+|  Network interface  | :white_check_mark: |
+|  Subnet  | :white_check_mark: |
+|  VM  | :white_check_mark: |
+|  Virtual Network  |  :x: |
+
+
+
+
 
 
 
