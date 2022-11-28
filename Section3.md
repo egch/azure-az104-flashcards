@@ -7,8 +7,18 @@
 - Shared: custom domain,
 - Basic: custom domain,
 - Standard: custom domain, Auto-scaling, Virtual Network connectivity
-## Docker
-[Docker](Docker.md)
+
+![App Service Plan](images/app-service-plan.webp)
+
+### Scale Up vs Scale Out
+**Scaling up** is adding further resources, like hard drives and memory, to increase the computing capacity of physical servers. 
+
+**Scaling out** is adding more servers to your architecture to spread the workload across more machines.
+
+## Azure App Service Backup
+Backup and restore are supported in Standard, Premium, and Isolated tiers. 
+Storage Account is required for custom backup
+
 ## Installing nginx
 
 ```shell
@@ -24,6 +34,16 @@ $ chmod 400 vm-ubuntu-ssh_key.cer
 $ ssh -i vm-ubuntu-ssh_key.cer enrico@13.79.186.11
 
 ```
+## Disk Types
+<details>
+
+- Standard HDD
+- Standard SSD
+- Premium SSD
+- Ultra Disk
+
+</details>
+
 ## Disks Snapshot
 TBD
 ## Custom Script Extensions
@@ -44,22 +64,11 @@ The Custom Script Extension integrates with Azure Resource Manager templates. Yo
 ### Lab - Custom Script Extenson nginx - Linux
 Follow the same steps as described [here](#Lab-Custom-Script-Extenson-web-server-Windows) to deploy this [file](scripts/custom-script-extension/install-nginx.sh) in order to install nginx on a ubuntu vm.
 
-## Azure Kubernetes
-- kubelet
-- container runtime
-### Azure Kubernetes Lab
-1. Kubernetes Service (create)
-2. create the [deplyment.yml](configuration/kubernetes/deployment.yml) & [service.yml](configuration/kubernetes/service.yml).
-3. kubernetes/Workloads - add deplyment.yml](configuration/kubernetes/deployment.yml) and [service.yml](configuration/kubernetes/service.yml).
-4. appcluster/Services and Ingresses
-5. app-service with ip and running on external ip (load balancer)
 
-## Azure Containier Instances
-- enable admin user on container registry
-- can connect to either azure registry or docker hub
-### Azure Containier Groups
+## Other sections
+* [Kubernetes](Kubernetes.md)
 
-
+* [Docker](Docker.md)
 
 
 

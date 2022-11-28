@@ -1,5 +1,12 @@
 # Manage Azure Identities
-## Role Based Assignment - RBAC
+## Role Based Acess Control - RBAC
+Azure RBAC is an authorization system built on Azure Resource Manager that provides fine-grained access management to Azure resources.
+### Built-in role
+- Contributor
+- Owner
+- Reader 
+- User Access Administrator
+
 ### Resource Level
 - create a VM with the main user 
 - go to a VM or any other resource.
@@ -25,6 +32,7 @@
 ### AD Roles
 - Azure AD roles control access to Azure AD resources such as users, groups, and applications using the Microsoft Graph API
 - Azure roles control access to Azure resources such as virtual machines or storage using Azure Resource Management
+
 
 ### AD Custom Domains
 TBD

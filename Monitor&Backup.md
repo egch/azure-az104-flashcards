@@ -29,7 +29,7 @@ Event |  where TimeGenerated > ago(1d) | summarize count() by Computer,Source
 [Azure Application Insights Tutorial | Amazing telemetry service](https://www.youtube.com/watch?v=A0jAeGf2zUQ&t=541s)
 
 ## Backup Service
-You need a Recovery Service vault in the same location
+You need a Recovery Service vault in the **same location**.
 - backup policy
 - backup manually
 - backup jobs
