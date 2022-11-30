@@ -30,9 +30,12 @@ Standard SKU: A Standard SKU public IP can be associated to a virtual machine or
  A network interface enables an Azure Virtual Machine to communicate with internet, Azure, and on-premises resources. A virtual machine created with the Azure portal, has one network interface with default settings. 
 
 - A VM must have at least one network interface attached to it.
-- Region of the NI should be the same as the VM (verify)
+- Region of the NI should be the same as the VM.
 - A VM can only have as many network interfaces attached to it as the VM size supports.
 - NI can be applied to VM or subnet (verify)
+
+
+*You can only assign a network interface to a virtual network that exists in the same subscription and location as the network interface.*
 
 ## Network Security Group - NSG
 You can use an Azure network security group to filter network traffic between Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources. For each rule, you can specify source and destination, port, and protocol.

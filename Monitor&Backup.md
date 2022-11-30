@@ -22,9 +22,6 @@ Event |  where TimeGenerated > ago(1d) | summarize count() by Computer,Source
 
 ```
 
-
-
-
 ## Application Insights
 [Azure Application Insights Tutorial | Amazing telemetry service](https://www.youtube.com/watch?v=A0jAeGf2zUQ&t=541s)
 
@@ -43,6 +40,15 @@ You need a Recovery Service vault in the **same location**.
 - VM Restore (need a storage account in the same location):
     - new VM
     - replace existing
+## Azure Recovery Service Agent - MARS
+- Instatll the recovery service agent on a target VM.
+- Reovery Service Vault and VM does not need to be within the same region.
+### Procedure
+- Create a Recovery Service Vault
+- Properties / Recovery Services Agent - Download
+- copy the exe on the target vm (on premises or not)
+
+
 #### Deleting Recovery Services vault
 <ol>
 <li>From Properties of the Recovery Services Vault select: Security Settings.</li>

@@ -21,6 +21,8 @@ Exam AZ-104: Microsoft Azure Administrator - flashcards
 
 [Deploy and Manage Azure compute resources](Section3.md)
 
+[Miscellaneous](miscellaneous.md)
+
 ## Azure VM
 
 ### Build a Linux VM

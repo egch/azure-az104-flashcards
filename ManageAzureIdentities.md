@@ -37,7 +37,15 @@ Azure RBAC is an authorization system built on Azure Resource Manager that provi
 ### AD Custom Domains
 TBD
 ### AAD Devices
-VM: login with AAD
+* AAD - devices (only windows machine)
+* VM: login with AAD
+
+#### Windows Device
+When you connect a Windows device with Azure AD using an Azure AD join, Azure AD adds the following security principals to the local administrators group on the device:
+
+* The Azure AD Global Administrator role
+* The Azure AD joined device local administrator role
+* The user performing the Azure AD join
 ### Password Reset
 Only with AD P1 or P2
 ### Users
@@ -49,15 +57,25 @@ Administrative units restrict permissions in a role to any portion of your organ
 
 *You can create a new administrative unit by using either the Azure portal, PowerShell or Microsoft Graph.*
 
+
+## Locks
+- Locking resources:
+    - read only locks
+    - delete locks
+
+### Moving Resource betwwee Resource Groups
+_The destination resource group must not have any existing App Service resources. App Service resources include:
+Web Apps
+App Service plans
+Uploaded or imported TLS/SSL certificates
+App Service Environments_
+
 ### Various
 - Conditional Access Policies - only with AAD P2
 
 - Resource Tags
 - Moving resources across resource groups
 - Moving resources across subscriptions
-- Locking resources:
-    - read only locks
-    - delete locks
 - Azure Policy service
 - Management Groups: each management group can have one or more subscriptions 
 
