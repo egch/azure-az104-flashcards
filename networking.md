@@ -55,11 +55,6 @@ NSG can be attached to:
 You can create a VM without NSG associated but it's risky.
 
 
-
-
-
-
-
 ## Load Balancer
 ### SKU
 - Basic Load Balancer:
@@ -67,6 +62,8 @@ You can create a VM without NSG associated but it's risky.
     - No SLA
     - Health Probes: TCP, HTTP
     - No support for availability zones
+    - Backend pool - only if part of availability set
+
 
 
 - Standard Load Balancer: 
@@ -74,9 +71,7 @@ You can create a VM without NSG associated but it's risky.
     - SLA 99,99%
     - Health Probes: TCP, HTTP, HTTPS
     - Support for availability zones
-
-
-
+    - if public IP only those with standard SKU can be added
 
 
 ### Varius
@@ -117,8 +112,41 @@ Azure Application Gateway is a web traffic load balancer that enables you to man
 
 Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example URI path or host headers. For example, you can route traffic based on the incoming URL. So if /images is in the incoming URL, you can route traffic to a specific set of servers (known as a pool) configured for images. If /video is in the URL, that traffic is routed to another pool that's optimized for videos.
 
+### Application Gateway - WAF
+Azure Web Application Firewall (WAF) on Azure Application Gateway provides centralized protection of your web applications from common exploits and vulnerabilities. Web applications are increasingly targeted by malicious attacks that exploit commonly known vulnerabilities. SQL injection and cross-site scripting are among the most common attacks.
+
+## Point-to-Site VPN Connection
+A Point-to-Site (P2S) VPN gateway connection lets you create a secure connection to your virtual network from an individual client computer. A P2S connection is established by starting it from the client computer.
+
+Secure connection between the on premises pc and the VM on its private IP.
+
+### Gateway subnet
+On the VN I have to install a Gateway SUbnet.
+The gateway subnet is part of the virtual network IP address range that you specify when configuring your virtual network. It contains the IP addresses that the virtual network gateway resources and services use.
+
+When you create the gateway subnet, you specify the number of IP addresses that the subnet contains. The number of IP addresses needed depends on the VPN gateway configuration that you want to create. Some configurations require more IP addresses than others. We recommend that you create a gateway subnet that uses a /27 or /28 (or /29.)
+
+
+## Site-to-Site VPN Connection
+Azure VPN gateways provide cross-premises connectivity between customer premises and Azure.
+
+Site-to-site VPN gateway connection from your on-premises network to the VNet.
+
+## Network Watcher
+- **Connection Monitor**: check network connectivity between machines
+- **Next hop**: next route for a packet of data
+- **IP Flow Verify**: check if traffic is allowed to/from a VM
+- **Connection troublehsoot**: 
+- **NSG Diagnostic**
+- **Traffic Analyitics**
+- **NSG Flow Logs**
+
+
+
 ## Quick topics
 **Virtual Appliance**: Azure network virtual appliance is used in the Azure application to enhance high availability. It is used as an advanced level of control over traffic flows, such as when building a demilitarized zone (DMZ) in the cloud.
+
+[Best practices to consider before deploying a network virtual appliance](https://azure.microsoft.com/en-us/blog/best-practices-to-consider-before-deploying-a-network-virtual-appliance/)
 
 
 

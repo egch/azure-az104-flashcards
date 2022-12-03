@@ -4,6 +4,7 @@
 - Metrics
 - Activity Log
 - Alerts
+
 ## Log Analytics Worksapce
 - Kustom Query Language
 - can be in another region different from that one of the resource group
@@ -40,6 +41,7 @@ You need a Recovery Service vault in the **same location**.
 - VM Restore (need a storage account in the same location):
     - new VM
     - replace existing
+    
 ## Azure Recovery Service Agent - MARS
 - Instatll the recovery service agent on a target VM.
 - Reovery Service Vault and VM does not need to be within the same region.

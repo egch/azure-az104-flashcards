@@ -28,9 +28,12 @@ $ sudo docker run --name mynginx -p 80:80 -d appregistryegch.azurecr.io/my-nginx
 
 
 ## Container Instances
+Azure Container Instance (ACI) is a service that offers the fastest and most straightforward way to run containers directly on the Microsoft Azure cloud, without having to provision any virtual machines and without the need for a higher-level service.
 
 ## Container Groups
-A container group is a collection of containers that get scheduled on the same host machine. The containers in a container group share a lifecycle, resources, local network, and storage volumes.
+A container group is a collection of containers that get scheduled on the same host machine.
+
+The containers in a container group share a lifecycle, resources, local network, and storage volumes.
 
 Multi-container groups are currently restricted to Linux containers.
 

@@ -17,8 +17,12 @@
 ### Azure Containier Groups
 
 ### Attach files to POD
-- Azure Premium disks
+- Azure Premium disks (single pod)
 - Azure Files
+
+
+## Calico
+Calico enables Kubernetes workloads and non-Kubernetes or legacy workloads to communicate seamlessly and securely. Kubernetes pods are first class citizens on your network and able to communicate with any other workload on your network. 
 
 
 

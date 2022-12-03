@@ -1,0 +1,1 @@
+New-AzResourceGroup -Name arm-grp -Location "North Europe"           

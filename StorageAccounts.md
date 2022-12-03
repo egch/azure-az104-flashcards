@@ -1,40 +1,40 @@
 # Storage Accounts
-### Types
+## Types
 - Blob -> Container
 - Table
 - QUeuue
 - File
 
-#### URL
+## URL
 - sa: egchsa
 - container: mystoragecontainer
 - file uploaded: draft-arch.jpeg
 https://egchsa.blob.core.windows.net/mystoragecontainer/draft-arch.jpeg
 
-### Performance
+## Performance
 - Standard
 - Premium
 
-### Authentication
+## Authentication
 - Azure subscribtion
 - Access Keys (1 or 2)
 - SAS (Shared Access Signature)
     - object level: browser
     - container level: Storage Explorer
 
-#### Access Policy
 
-### Redundancy
-- LRS: Locally-redundant Storage
-- GRS: Geo-redundant Storage - data replicated to another region.
-- ZRS: Zone-redundant Storage - data replicated synchronously across availability zones.
-- GZRS - Geo-zone-redundant Storage
+## Redundancy
+- **LRS**: Locally-redundant Storage - thre copies are made of your data within same data center
+- **GRS**: Geo-redundant Storage - data replicated to another region.
+- **RA-GRS**: Read Access Geo-redundant Storage - data replicated to another region. Read data in case one region is not available
+- **ZRS**: Zone-redundant Storage - data replicated synchronously across availability zones.
+- **GZRS** : Geo-zone-redundant Storage
 
-#### GRS strategy
+### GRS strategy
 Data copied three times in the Primary Rgion using LRS
 Data copied three times secondary region using LRS
 
-#### GZRS strategy
+### GZRS strategy
 Data copied locally through ZRS.
 
 
