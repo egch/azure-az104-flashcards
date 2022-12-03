@@ -47,6 +47,13 @@ Only with AD P1 or P2
 - create bulk users
 - Multi Factor Authentication
 
+## Conditional Access Policies
+Only with AAD P2.
+
+Conditional Policy
+
+Example: I want users ONLY with MFA enabled.
+
 ## Multi Factor Authentication
 AAD / Users / Per-User MFA
 

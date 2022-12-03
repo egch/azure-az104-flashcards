@@ -44,7 +44,6 @@ Uploaded or imported TLS/SSL certificates
 App Service Environments_
 
 ### Various
-- Conditional Access Policies - only with AAD P2
 
 - Resource Tags
 - Moving resources across resource groups
