@@ -142,6 +142,18 @@ Site-to-site VPN gateway connection from your on-premises network to the VNet.
 - **NSG Flow Logs**
 
 
+## DNS - Domain Name System
+**Context**: Azure public DNS zone named enricogiurin.com. They also have the domain name registered as part of an external domain registrar. They want to ensure that records from the Internet get routed to their Azure DNS zone.
+
+**Solution**: Modify the **NS** record in the external domain system (www.enricogiurin.com)
+
+### Azure Private DNS
+Private DNS zone
+
+_Azure Private DNS provides a reliable and secure DNS service for your virtual network. Azure Private DNS manages and resolves domain names in the virtual network without the need to configure a custom DNS solution. By using private DNS zones, you can use your own custom domain name instead of the Azure-provided names during deployment._
+
+
+### Azure Public DNS
 
 ## Quick topics
 **Virtual Appliance**: Azure network virtual appliance is used in the Azure application to enhance high availability. It is used as an advanced level of control over traffic flows, such as when building a demilitarized zone (DMZ) in the cloud.

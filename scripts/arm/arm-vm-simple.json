@@ -124,7 +124,7 @@
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_A2_v2"
+                    "vmSize": "Standard_B1s"
                 },
                 "osProfile": {
                     "computerName": "egchvmarm",
@@ -136,7 +136,7 @@
                     "imageReference": {
                         "publisher": "MicrosoftWindowsServer",
                         "offer": "WindowsServer",
-                        "sku": "2012-R2-Datacenter",
+                        "sku": "2019-datacenter-gensecond",
                         "version": "latest"
                     },
                     "osDisk": {
