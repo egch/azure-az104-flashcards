@@ -2,7 +2,7 @@
 ## Types
 - Blob -> Container
 - Table
-- QUeuue
+- Queue
 - File
 
 ## URL
