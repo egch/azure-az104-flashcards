@@ -24,7 +24,7 @@ https://egchsa.blob.core.windows.net/mystoragecontainer/draft-arch.jpeg
 
 
 ## Redundancy
-- **LRS**: Locally-redundant Storage - thre copies are made of your data within same data center
+- **LRS**: Locally-redundant Storage - three copies are made of your data within same data center
 - **GRS**: Geo-redundant Storage - data replicated to another region.
 - **RA-GRS**: Read Access Geo-redundant Storage - data replicated to another region. Read data in case one region is not available
 - **ZRS**: Zone-redundant Storage - data replicated synchronously across availability zones.
