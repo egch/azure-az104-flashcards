@@ -47,6 +47,8 @@ Data copied locally through ZRS.
 ## Azure File shares
 - connect local drive
 - Azure File Sync Service 
+
+### Azure Files Sync 
 ### File Shares URL
 https://egchsa.file.core.windows.net/container/fileName
 

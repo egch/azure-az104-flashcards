@@ -140,7 +140,40 @@ Site-to-site VPN gateway connection from your on-premises network to the VNet.
 - **NSG Diagnostic**
 - **Traffic Analyitics**
 - **NSG Flow Logs**
+- **Network Watcher variable packet capture**
 
+### Connection troublehsoot
+- VM / connection troubleshoot
+- Azure Network watcher extension
+### Connection Monitor
+- Network Watcher/Connection Monitor
+- Data is stored into Log Analytics Workspace
+- Source/Destination/Test Configuration
+### IP Flow verify
+Check if traffic is allowed to/from a VM
+- Network Watcher/IP Flow verify
+- Target vm port 80
+- remote ip address: my IP (217.162.243.60)
+### Next Hop
+- Network Watcher/Next Hop
+- from Azure VM to my IP
+- Next hop type: Internet
+
+---
+- from vm1 (private IP) to vm2 (private IP)
+- Next hop type: VirtualNetwork
+
+### NSG Diagnostic
+The Network Security Group (NSG) Diagnostics tool provides detailed information to understand and debug the security configuration of your network. 
+
+ Network Watcher/NSG Diagnostic
+### NSG Flow Logs
+- Network Watcher/NSG Flow Logs
+- NSG
+- Requires storage account & Log Analytic Workspace
+- in the folder of storage account you will find the log file, i.e. PT1H.json
+- Log format in the MS documentation
+- Network Watcher | Traffic Analytics
 
 ## DNS - Domain Name System
 **Context**: Azure public DNS zone named enricogiurin.com. They also have the domain name registered as part of an external domain registrar. They want to ensure that records from the Internet get routed to their Azure DNS zone.
