@@ -51,18 +51,6 @@ If the Azure built-in roles don't meet the specific needs of your organization, 
 - Custom Role (from RG)
 
 
-## Locks
-- Locking resources:
-    - read only locks
-    - delete locks
-
-Locks cabn be applied to:
-- resource level
-- resource group level
-- subscription level
-
-Locks are inherited. 
-
 ### Moving Resource between Resource Groups
 _The destination resource group must not have any existing App Service resources. App Service resources include:
 Web Apps

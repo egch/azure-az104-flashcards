@@ -8,7 +8,8 @@
 - Resource Group level
 - Subscription Level
 
-With the read only lock I cannot even stop/start the VM.
+With the read only lock I cannot even stop/start the VM.  
+Locks are inherited. 
 
 ## Tags
 
@@ -16,4 +17,3 @@ With the read only lock I cannot even stop/start the VM.
 - Resource Level
 - Resource Group level
 - Subscription Level
-
