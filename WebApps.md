@@ -35,3 +35,14 @@ Service Plan: Shared or higher.
 Add to your domain provider the following two DNS entries:
 - A record
 - TXT record
+
+## SSL
+Service Plan: Basic or higher.  
+WebApp/SSL/Create App Service Managed Certificate  
+Binding
+
+## Backups
+Service Plan: Standard or higher.  
+Storage Account is needed
+
+Restore a prev state into a new webapp.
