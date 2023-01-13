@@ -71,16 +71,25 @@ The Custom Script Extension integrates with Azure Resource Manager templates. Yo
 Follow the same steps as described [here](#Lab-Custom-Script-Extenson-web-server-Windows) to deploy this [file](scripts/custom-script-extension/install-nginx.sh) in order to install nginx on a ubuntu vm.
 
 
+
+## VM Availability Zones - 49
+Availability Zones are unique physical locations within an Azure region. Zone-redundant services replicate your applications and data across Availability Zones to protect from single-points-of-failure. With Availability Zones, Azure offers industry best 99.99% VM uptime SLA.
+
+There aint't additional cost to add avaiability zones but there is bandwidth cost.
+
 ## VM Scale Sets
 Orchestration mode:
 - Uniform
 - Flexible
 
+
+
 ### Scale Up vs Scale Out
 **Scaling up** is adding further resources, like hard drives and memory, to increase the computing capacity of physical servers. 
 
 **Scaling out** is adding more servers to your architecture to spread the workload across more machines.
-## VM Image
+
+   
 
 One of the main advantages of Flexible orchestration is that it provides orchestration features over standard Azure IaaS VMs, instead of scale set child virtual machines. This means you can use all of the standard VM APIs when managing Flexible orchestration instances, instead of the Virtual Machine Scale Set VM APIs you use with Uniform orchestration.
 

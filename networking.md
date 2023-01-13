@@ -65,7 +65,6 @@ You can create a VM without NSG associated but it's risky.
     - Backend pool - only if part of availability set
 
 
-
 - Standard Load Balancer: 
     - Charge per hur
     - SLA 99,99%
