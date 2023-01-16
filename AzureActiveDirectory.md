@@ -13,7 +13,7 @@
 Dynamic group membership adds and removes group members automatically using membership rules based on member attributes.
 
 ## AD Roles
-Created exclusevly to carry on tasks in AAD.
+Created exclusively to carry on tasks in AAD.
 - Azure AD roles control access to Azure AD resources such as users, groups, and applications using the Microsoft Graph API
 - Azure roles control access to Azure resources such as virtual machines or storage using Azure Resource Management
 
