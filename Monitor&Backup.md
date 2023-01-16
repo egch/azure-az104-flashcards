@@ -14,6 +14,9 @@
 - LAW/Legacy agents management/Windows event logs
 - LAW/Logs/Event/ Run KQL
 
+LAW/VM/Connect VM -> installing an agent into the vm.  
+I can connect on premise resource also, but I need to install the agent.
+
 ### Log Analytics Queries
 ```sql
 Event | search "egchvm"
@@ -26,6 +29,8 @@ Event |  where TimeGenerated > ago(1d) | summarize count() by Computer,Source
 ## Application Insights
 [Azure Application Insights Tutorial | Amazing telemetry service](https://www.youtube.com/watch?v=A0jAeGf2zUQ&t=541s)
 
+
+## Backup Feature - 284
 ## Backup Service
 You need a Recovery Service vault in the **same location**.
 - backup policy
@@ -41,6 +46,25 @@ You need a Recovery Service vault in the **same location**.
 - VM Restore (need a storage account in the same location):
     - new VM
     - replace existing
+
+In case of new VM there won't be any NSG linked to the new VM.
+
+### Deleting Recovery Services vault
+#### Deleting Recovery Services vault - 288
+<ol>
+<li>From Properties of the Recovery Services Vault select: Security Settings.</li>
+<li>disable Always-on soft delete</li>
+</ol>
+
+#### Deleting backup items
+- Service vault
+- backup items
+- vm
+- stop backup
+- delete backup data
+
+
+
     
 ## Azure Recovery Service Agent - MARS
 - Instatll the recovery service agent on a target VM.

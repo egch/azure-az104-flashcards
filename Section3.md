@@ -73,11 +73,11 @@ Follow the same steps as described [here](#Lab-Custom-Script-Extenson-web-server
 
 
 ## VM Availability Zones - 49
-Availability Zones are unique physical locations within an Azure region. Zone-redundant services replicate your applications and data across Availability Zones to protect from single-points-of-failure. With Availability Zones, Azure offers industry best 99.99% VM uptime SLA.
+Availability Zones are unique physical locations within an Azure region. Zone-redundant services replicate your applications and data across Availability Zones to protect from single-points-of-failure. With Availability Zones, Azure offers industry best **99.99%** VM uptime SLA.
 
 There aint't additional cost to add avaiability zones but there is bandwidth cost.
 
-## VM Scale Sets
+## VM Scale Set - 52
 Orchestration mode:
 - Uniform
 - Flexible
