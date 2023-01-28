@@ -58,6 +58,21 @@ App Service plans
 Uploaded or imported TLS/SSL certificates
 App Service Environments_
 
+## Azure Policies
+### Example
+- Require a tag and its value on resources
+- Assign/Scope:
+  - Management Group
+  - subscription
+  - resource group
+- Exclusions
+- Tag name/value
+### Remediation
+- Create a Managed Identity
+
+If I try to create a new resource this needs to be compliant.
+On the existing resources they will be marked as not policiy compliant.
+
 ### Various
 
 - Resource Tags

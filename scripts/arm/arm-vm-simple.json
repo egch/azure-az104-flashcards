@@ -2,34 +2,53 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        
-        "vmpassowrd":{
+
+        "vmpassowrd": {
             "type": "securestring",
             "metadata": {
                 "description": "Please type the password"
             }
+        },
+        "vm-name": {
+            "type": "string",
+            "metadata": {
+                "description": "Please tuype the name of the VM"
+            }
         }
+
+        
     },
     "functions": [],
-    "variables": {},
+    "variables": {
+        "PublicIP": "[concat(parameters('vm-name'), '-PublicIP')]",
+        "MetworkSG": "[concat(parameters('vm-name'), '-nsg')]",
+        "VirtualNetwork": "[concat(parameters('vm-name'), '-VirtualNetwork')]",
+        "VirtualNetwork-SubNet": "[concat(parameters('vm-name'), '-VirtualNetwork-SubNet')]",
+        "NetworkInterface": "[concat(parameters('vm-name'), '-NetworkInterface')]",
+        "Disk": "[concat(parameters('vm-name'), '_Disk')]",
+        "DNS": "[toLower(parameters('vm-name'))]"
+    },
     "resources": [
         {
-            "name": "egchvmarm-PublicIP",
+            "name": "[variables('PublicIP')]",
             "type": "Microsoft.Network/publicIPAddresses",
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
             "tags": {
                 "displayName": "PublicIPAddress"
             },
+            "sku": {
+                "name": "Basic"
+            },
             "properties": {
                 "publicIPAllocationMethod": "Dynamic",
                 "dnsSettings": {
-                    "domainNameLabel": "[toLower('egchvmarm')]"
+                    "domainNameLabel": "[variables('DNS')]"
                 }
             }
         },
         {
-            "name": "egchvmarm-nsg",
+            "name": "[variables('MetworkSG')]",
             "type": "Microsoft.Network/networkSecurityGroups",
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
@@ -53,15 +72,15 @@
             }
         },
         {
-            "name": "egchvmarm-VirtualNetwork",
+            "name": "[variables('VirtualNetwork')]",
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/networkSecurityGroups', 'egchvmarm-nsg')]"
+                "[resourceId('Microsoft.Network/networkSecurityGroups', variables('MetworkSG'))]"
             ],
             "tags": {
-                "displayName": "egchvmarm-VirtualNetwork"
+                "displayName": "[variables('VirtualNetwork')]"
             },
             "properties": {
                 "addressSpace": {
@@ -71,11 +90,11 @@
                 },
                 "subnets": [
                     {
-                        "name": "egchvmarm-VirtualNetwork-Subnet",
+                        "name": "[variables('VirtualNetwork-SubNet')]",
                         "properties": {
                             "addressPrefix": "10.0.0.0/24",
                             "networkSecurityGroup": {
-                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', 'egchvmarm-nsg')]"
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('MetworkSG'))]"
                             }
                         }
                     }
@@ -83,28 +102,28 @@
             }
         },
         {
-            "name": "egchvmarm-NetworkInterface",
+            "name": "[variables('NetworkInterface')]",
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/publicIPAddresses', 'egchvmarm-PublicIP')]",
-                "[resourceId('Microsoft.Network/virtualNetworks', 'egchvmarm-VirtualNetwork')]"
+                "[resourceId('Microsoft.Network/publicIPAddresses', variables('PublicIP'))]",
+                "[resourceId('Microsoft.Network/virtualNetworks', variables('VirtualNetwork'))]"
             ],
             "tags": {
-                "displayName": "egchvmarm Network Interface"
+                "displayName": "[variables('NetworkInterface')]"
             },
             "properties": {
                 "ipConfigurations": [
                     {
-                        "name": "ipConfig1",
+                        "name": "[variables('publicIP')]",
                         "properties": {
                             "privateIPAllocationMethod": "Dynamic",
                             "publicIPAddress": {
-                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'egchvmarm-PublicIP')]"
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('PublicIP'))]"
                             },
                             "subnet": {
-                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'egchvmarm-VirtualNetwork', 'egchvmarm-VirtualNetwork-Subnet')]"
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('VirtualNetwork'), variables('VirtualNetwork-SubNet'))]"
                             }
                         }
                     }
@@ -112,22 +131,22 @@
             }
         },
         {
-            "name": "egchvmarm",
+            "name": "[parameters('vm-name')]",
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2021-03-01",
             "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/networkInterfaces', 'egchvmarm-NetworkInterface')]"
+                "[resourceId('Microsoft.Network/networkInterfaces', variables('NetworkInterface'))]"
             ],
             "tags": {
-                "displayName": "egchvmarm"
+                "displayName": "[parameters('vm-name')]"
             },
             "properties": {
                 "hardwareProfile": {
                     "vmSize": "Standard_B1s"
                 },
                 "osProfile": {
-                    "computerName": "egchvmarm",
+                    "computerName": "[parameters('vm-name')]",
 
                     "adminUsername": "enrico_azure",
                     "adminPassword": "[parameters('vmpassowrd')]"
@@ -140,7 +159,7 @@
                         "version": "latest"
                     },
                     "osDisk": {
-                        "name": "egchvmarmOSDisk",
+                        "name": "[variables('Disk')]",
                         "caching": "ReadWrite",
                         "createOption": "FromImage"
                     }
@@ -148,7 +167,7 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "[resourceId('Microsoft.Network/networkInterfaces', 'egchvmarm-NetworkInterface')]"
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('NetworkInterface'))]"
                         }
                     ]
                 }
