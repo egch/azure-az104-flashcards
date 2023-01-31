@@ -5,6 +5,17 @@
 - Activity Log
 - Alerts
 
+### Quick look - 272
+- Diagnostic Settings
+- Metrics
+- Insights
+- Alerts:
+    - metrics
+    - activity log
+### Alert - 273
+- Alert rule (condition/event)
+- Action Gropus (what to do, i.e. email/sms)
+
 ## Log Analytics Worksapce
 - Kustom Query Language
 - can be in another region different from that one of the resource group

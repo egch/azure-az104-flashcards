@@ -3,18 +3,27 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
 
-        "vmpassowrd": {
-            "type": "securestring",
-            "metadata": {
-                "description": "Please type the password"
-            }
-        },
         "vm-name": {
             "type": "string",
             "metadata": {
                 "description": "Please tuype the name of the VM"
             }
+        },
+
+         "virtual-network": {
+            "type": "string",
+            "metadata": {
+                "description": "Please tuype the name of the Virtual Network"
+            }
+        },
+
+        "vmpassowrd": {
+            "type": "securestring",
+            "metadata": {
+                "description": "Please type the password"
+            }
         }
+        
 
         
     },
@@ -22,11 +31,10 @@
     "variables": {
         "PublicIP": "[concat(parameters('vm-name'), '-PublicIP')]",
         "MetworkSG": "[concat(parameters('vm-name'), '-nsg')]",
-        "VirtualNetwork": "[concat(parameters('vm-name'), '-VirtualNetwork')]",
-        "VirtualNetwork-SubNet": "[concat(parameters('vm-name'), '-VirtualNetwork-SubNet')]",
+        "VirtualNetwork": "[concat(parameters('virtual-network'), '-VirtualNetwork')]",
+        "VirtualNetwork-SubNet": "[concat(parameters('virtual-network'), '-SubNet')]",
         "NetworkInterface": "[concat(parameters('vm-name'), '-NetworkInterface')]",
-        "Disk": "[concat(parameters('vm-name'), '_Disk')]",
-        "DNS": "[toLower(parameters('vm-name'))]"
+        "Disk": "[concat(parameters('vm-name'), '_Disk')]"
     },
     "resources": [
         {
@@ -41,10 +49,7 @@
                 "name": "Basic"
             },
             "properties": {
-                "publicIPAllocationMethod": "Dynamic",
-                "dnsSettings": {
-                    "domainNameLabel": "[variables('DNS')]"
-                }
+                "publicIPAllocationMethod": "Dynamic"
             }
         },
         {
@@ -55,7 +60,7 @@
             "properties": {
                 "securityRules": [
                     {
-                        "name": "nsgRule1",
+                        "name": "remoteDesktop",
                         "properties": {
                             "description": "description",
                             "protocol": "Tcp",
@@ -65,6 +70,20 @@
                             "destinationAddressPrefix": "*",
                             "access": "Allow",
                             "priority": 100,
+                            "direction": "Inbound"
+                        }
+                    },
+                                        {
+                        "name": "nsgRuleHttp80",
+                        "properties": {
+                            "description": "description",
+                            "protocol": "Tcp",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "80",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 110,
                             "direction": "Inbound"
                         }
                     }
@@ -143,7 +162,7 @@
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_B1s"
+                    "vmSize": "Standard_D2s_v3"
                 },
                 "osProfile": {
                     "computerName": "[parameters('vm-name')]",
