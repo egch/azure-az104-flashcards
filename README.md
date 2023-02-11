@@ -1,27 +1,39 @@
 # azure-az104-flashcards
 Exam AZ-104: Microsoft Azure Administrator - flashcards
 ## Chapters
-[Manage Azure Identities](ManageAzureIdentities.md)
-
-[Storage Accounts](StorageAccounts.md)
-
-[Networking](networking.md)
-
-[Docker](Docker.md)
-
-[Monitor & Backup](Monitor&Backup.md)
-
-[Azure CLI](az-cli.md)
-
-[Powershell](Powershell.md)
-
-[ARM Templates](ARM-Templates.md)
-
-[Resource locks](resource-locks.md)
 
 [Deploy and Manage Azure compute resources](Section3.md)
 
-[Miscellaneous](miscellaneous.md)
+[Docker](Docker.md)
+
+[Kubernetes](Kubernetes.md)
+
+[WebApp](WebApp.md)
+
+[Networking](networking.md)
+
+[DNS](dns.md)
+
+[Storage Accounts](StorageAccounts.md)
+
+[Manage Azure Identities](ManageAzureIdentities.md)
+
+[Resource locks](resource-locks.md)
+
+[Azure Active Directory](AzureActiveDirectory.md)
+
+[Monitor & Backup](Monitor&Backup.md)
+
+[Powershell](Powershell.md)
+
+[Azure CLI](az-cli.md)
+
+[ARM Templates](ARM-Templates.md)
+
+[Various](Various.md)
+
+[Scripts](scripts)
+
 
 ## Azure VM
 

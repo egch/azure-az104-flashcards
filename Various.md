@@ -22,3 +22,14 @@ In Windows operating systems, the UNC name format is:
     -DestinationResourceGroupName "<myDestinationResourceGroup>" `
     -ResourceId <myResourceId,myResourceId,myResourceId>
  ```
+## Net use
+Connects a computer to or disconnects a computer from a shared resource, or displays information about computer connections. The command also controls persistent net connections. Used without parameters, net use retrieves a list of network connections.
+
+```shell
+% net use e: \\financial\letters
+```
+
+## Resource Groups
+Azure resource groups are specific to Azure regions. But resources in a resource group often span multiple regions.
+
+We can create a resource in a RG having a different region than the RG.

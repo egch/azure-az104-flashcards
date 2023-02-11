@@ -7,6 +7,10 @@ Azure RBAC is an authorization system built on Azure Resource Manager that provi
 - Owner
 - Reader 
 - User Access Administrator
+
+### Special Built-in roles
+**Security Admin**  
+_View and update permissions for Microsoft Defender for Cloud. Same permissions as the Security Reader role and can also update the security policy and dismiss alerts and recommendations._
 ### Powershell commands
 ```powershell
 $ Get-AzRoleDefinition "Virtual Machine Contributor"
@@ -90,3 +94,6 @@ On the existing resources they will be marked as not policiy compliant.
 - Management Groups: each management group can have one or more subscriptions 
 
 
+---
+
+[Home](README.md)
