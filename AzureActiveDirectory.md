@@ -25,8 +25,12 @@ AAD - Roles and administrators
 ## AD Custom Domains
 Every new Azure AD tenant comes with an initial domain name, <domainname>.onmicrosoft.com. You can't change or delete the initial domain name, but you can add your organization's names. Adding custom domain names helps you to create user names that are familiar to your users, such as alain@contoso.com.
 
-- Azure Portal: Custom domain name -> Record Type TXT
-- godaddy: Add TXT record
+1. AAD custom domain names
+2. Add Custom domain name (your-interviews.com)
+3. Add the showed TXT record to your domain provider (godaddy.com)
+4. From Azure portal verify the domain
+5. Create a new user with that specific domain
+
 
 ## Devices
 * AAD - devices - only windows machine: 10 & 2019

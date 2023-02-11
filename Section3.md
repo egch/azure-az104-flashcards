@@ -84,10 +84,14 @@ Orchestration mode:
 
 
 
+
 ### Scale Up vs Scale Out
 **Scaling up** is adding further resources, like hard drives and memory, to increase the computing capacity of physical servers. 
 
 **Scaling out** is adding more servers to your architecture to spread the workload across more machines.
+
+### DSC - Desired State Configuration extension handler
+[Azure Desired State Configuration](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview)
 
    
 

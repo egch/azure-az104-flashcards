@@ -7,6 +7,11 @@ Azure RBAC is an authorization system built on Azure Resource Manager that provi
 - Owner
 - Reader 
 - User Access Administrator
+### Powershell commands
+```powershell
+$ Get-AzRoleDefinition "Virtual Machine Contributor"
+```
+
 #### Support Request Contributor
 Lets you create and manage Support requests
 ```json
@@ -73,7 +78,10 @@ App Service Environments_
 If I try to create a new resource this needs to be compliant.
 On the existing resources they will be marked as not policiy compliant.
 
-### Various
+## Administrative Units
+- MS Graph
+
+## Various
 
 - Resource Tags
 - Moving resources across resource groups

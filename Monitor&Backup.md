@@ -4,6 +4,10 @@
 - Metrics
 - Activity Log
 - Alerts
+- Networks:
+    - Connectivity
+    - Traffic
+    - Network health and metrics
 
 ### Quick look - 272
 - Diagnostic Settings
@@ -38,6 +42,16 @@ Event |  where TimeGenerated > ago(1d) | summarize count() by Computer,Source
 ```
 
 ## Application Insights
+Application Insights provides other features including, but not limited to:
+
+- Live Metrics – observe activity from your deployed application in real time with no effect on the host environment
+- Availability – also known as “Synthetic Transaction Monitoring”, probe your applications external endpoint(s) to test the overall availability and responsiveness over time
+- GitHub or Azure DevOps integration – create GitHub or Azure DevOps work items in context of Application Insights data
+- Usage – understand which features are popular with users and how users interact and use your application
+- Smart Detection – automatic failure and anomaly detection through proactive telemetry analysis
+
+### References
+
 [Azure Application Insights Tutorial | Amazing telemetry service](https://www.youtube.com/watch?v=A0jAeGf2zUQ&t=541s)
 
 
@@ -51,6 +65,14 @@ You need a Recovery Service vault in the **same location**.
 - Application consistent
 - File-System consistent
 - Crash consistent
+
+### Backup VMs Sequence
+1. Backup Center
+2. Recovery Services Vault
+3. Backup
+4. Create or select existing backup policy
+5. Add the selected VMs to be backed up
+6. Enable Backup
 
 ### Backup Restore
 - File Restore

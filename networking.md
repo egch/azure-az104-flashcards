@@ -33,6 +33,7 @@ Standard SKU: A Standard SKU public IP can be associated to a virtual machine or
 - Region of the NI should be the same as the VM.
 - A VM can only have as many network interfaces attached to it as the VM size supports.
 - NI can be applied to VM or subnet (verify)
+- Stop the VM before to add a new NI.
 
 
 *You can only assign a network interface to a virtual network that exists in the same subscription and location as the network interface.*
@@ -131,7 +132,7 @@ Azure VPN gateways provide cross-premises connectivity between customer premises
 
 Site-to-site VPN gateway connection from your on-premises network to the VNet.
 
-## Network Watcher
+## Network Watcher/
 - **Connection Monitor**: check network connectivity between machines
 - **Next hop**: next route for a packet of data
 - **IP Flow Verify**: check if traffic is allowed to/from a VM
@@ -162,11 +163,12 @@ Check if traffic is allowed to/from a VM
 - from vm1 (private IP) to vm2 (private IP)
 - Next hop type: VirtualNetwork
 
-### NSG Diagnostic
-The Network Security Group (NSG) Diagnostics tool provides detailed information to understand and debug the security configuration of your network. 
+### NSG Diagnostic - 176
+The Network Security Group (NSG) Diagnostics tool provides detailed information to understand and debug the security configuration of your network.  
+Network Watcher / NSG diagnostic
 
  Network Watcher/NSG Diagnostic
-### NSG Flow Logs
+### NSG Flow Logs - 177
 - Network Watcher/NSG Flow Logs
 - NSG
 - Requires storage account & Log Analytic Workspace

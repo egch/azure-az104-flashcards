@@ -18,7 +18,7 @@
 
 ### Attach files to POD
 - Azure Premium disks (single pod)
-- Azure Files
+- Azure Files (multiple pods)
 
 
 ## Calico

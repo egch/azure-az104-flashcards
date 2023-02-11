@@ -15,3 +15,10 @@ In Windows operating systems, the UNC name format is:
 ```shell
  \\egch.file.core.windows.net\demo
  ```
+
+ ## Move Resources to a different subcription 
+ ```powershell
+ $   Move-AzResource -DestinationSubscriptionId "<myDestinationSubscriptionID>" `
+    -DestinationResourceGroupName "<myDestinationResourceGroup>" `
+    -ResourceId <myResourceId,myResourceId,myResourceId>
+ ```
