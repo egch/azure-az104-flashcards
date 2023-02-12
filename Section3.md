@@ -7,12 +7,6 @@
 TBD
 
 
-
-
-## Azure App Service Backup
-Backup and restore are supported in Standard, Premium, and Isolated tiers. 
-Storage Account is required for custom backup
-
 ## Installing nginx
 
 ```shell

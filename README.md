@@ -8,7 +8,7 @@ Exam AZ-104: Microsoft Azure Administrator - flashcards
 
 [Kubernetes](Kubernetes.md)
 
-[WebApp](WebApp.md)
+[WebApp](WebApps.md)
 
 [Networking](networking.md)
 

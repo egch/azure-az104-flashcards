@@ -42,7 +42,9 @@ WebApp/SSL/Create App Service Managed Certificate
 Binding
 
 ## Backups
-Service Plan: Standard or higher.  
-Storage Account is needed
+- Service Plan: Standard or higher.  
+- Storage Account is needed
 
 Restore a prev state into a new webapp.
+
+Storage Account is required for custom backup
