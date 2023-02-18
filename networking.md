@@ -58,20 +58,18 @@ You can create a VM without NSG associated but it's risky.
 
 ## Load Balancer
 ### SKU
-- Basic Load Balancer:
-    - free
-    - No SLA
-    - Health Probes: TCP, HTTP
-    - No support for availability zones
-    - Backend pool - only if part of availability set
+
+| Feature| Basic | Standard | 
+|:----------|:----------|-------------:|
+|  Cost |Free  | Charged per hour |
+|  SLA |NO SLA | 99,99% |
+|  Health Probes|TCP, HTTP | TCP, HTTP, HTTPS|
+|  Availability Zones   Support| :x: | :white_check_mark:|
+|  Backend Pool| only if part of availability set or Availability Zones | Also indipendent VM can be added|
+
+Standard: Only public IP with standard SKU can be added 
 
 
-- Standard Load Balancer: 
-    - Charge per hur
-    - SLA 99,99%
-    - Health Probes: TCP, HTTP, HTTPS
-    - Support for availability zones
-    - if public IP only those with standard SKU can be added
 
 
 ### Varius

@@ -56,7 +56,7 @@ Only with AD P1 or P2
 - Multi Factor Authentication
 
 ## Conditional Access Policies
-Only with AAD P2.
+Only with AAD P2/P1.
 
 Conditional Policy
 

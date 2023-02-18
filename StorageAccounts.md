@@ -61,7 +61,15 @@ https://egchsa.file.core.windows.net/container/fileName
 - Azure Import/Export Service
 - Azure Data Box
 
-### AzCopy Tool
+## Azure Storage Explorer
+I cannot create a new storage account via the use of Azure Storage Explorer.
+
+### Connection Types
+- subscription
+- Access Keys (2 rotable ak)
+- Shared Access Signatures
+
+## AzCopy Tool
 
 ```shell
 $ azcopy make "https://appstore4040.blob.core.windows.net/tmp?sv=2020-08-04&ss=b&srt=sco&sp=rwdlac&se=2021-12-13T14:36:11Z&st=2021-12-13T06:36:11Z&spr=https&sig=RtWuKGVi%2BTp1yW1VNAqgSFMmFtrRrEsQ9f%2BJy7LuIZU%3D"

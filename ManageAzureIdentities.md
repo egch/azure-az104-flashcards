@@ -93,6 +93,10 @@ On the existing resources they will be marked as not policiy compliant.
 - Azure Policy service
 - Management Groups: each management group can have one or more subscriptions 
 
+## Management Groups
+Management groups are containers that help you manage access, policy, and compliance across multiple subscriptions. Create these containers to build an effective and efficient hierarchy that can be used with Azure Policy and Azure Role Based Access Controls.
+
+**Tags cannot be applied to Mgmt group!**
 
 ---
 

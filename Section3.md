@@ -6,6 +6,8 @@
 ## Azure Bastion
 TBD
 
+## VM creation
+I cannot create a VM in a region different from the region of the corresponding virtual network. 
 
 ## Installing nginx
 
@@ -75,8 +77,20 @@ There aint't additional cost to add avaiability zones but there is bandwidth cos
 Orchestration mode:
 - Uniform
 - Flexible
+- IP can be public or not
+### Scale Condition
+- scale in: reduce instances
+- scale out: increase instances
 
+- Conditions: CPU, Memory, Data Disk target IOPS etc
+- Duration in minutes: This is amount of time that Autoscale engine will look back for metrics. 
 
+Lab: Ubuntu/stress tool:
+```sh
+$ sudo stress --cpu 1000
+```
+
+cool down time(time to setup properly): during that time no scaling conditions will be applied.
 
 
 ### Scale Up vs Scale Out
@@ -87,9 +101,19 @@ Orchestration mode:
 ### DSC - Desired State Configuration extension handler
 [Azure Desired State Configuration](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview)
 
+It's about deployment of the application on the new instances created by auto scale.
    
 
 One of the main advantages of Flexible orchestration is that it provides orchestration features over standard Azure IaaS VMs, instead of scale set child virtual machines. This means you can use all of the standard VM APIs when managing Flexible orchestration instances, instead of the Virtual Machine Scale Set VM APIs you use with Uniform orchestration.
+## Proximity Placement Group
+A proximity placement group is a logical grouping used to make sure that Azure compute resources are physically located close to each other. Proximity placement groups are useful for workloads where low latency is a requirement.
+
+Low latency between stand-alone VMs.
+
+- Create a Proximity Placement Group
+- Create VM/Advanced/Link to PPG
+- If I create a VM in a different region than the PPG I cannot link it to it.
+
 
 ## Other sections
 * [Kubernetes](Kubernetes.md)
