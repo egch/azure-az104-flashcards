@@ -65,7 +65,7 @@ You can create a VM without NSG associated but it's risky.
 |  SLA |NO SLA | 99,99% |
 |  Health Probes|TCP, HTTP | TCP, HTTP, HTTPS|
 |  Availability Zones   Support| :x: | :white_check_mark:|
-|  Backend Pool| only if part of availability set \\ or Availability Zones | Also indipendent VM can be added|
+|  Backend Pool| only if part of Availability Set <br/> or Availability Zones | Also indipendent VM can be added|
 
 Standard: Only public IP with standard SKU can be added 
 
