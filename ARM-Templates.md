@@ -21,10 +21,13 @@ $ PS> New-AzResourceGroupDeployment -ResourceGroupName arm-grp -TemplateFile scr
 
 ```
 
+
+
+
 ## Deployment via Azure Portal
 - search for 'Template deployment'
 - click on 'Deploy from a custom template'
-- create
+- create (or paste the json)
 - build with the editor
 - save
 
@@ -94,7 +97,8 @@ $ PS>  New-AzResourceGroupDeployment -ResourceGroupName az-104 -TemplateFile ./s
         }
     },
 ```
-
+### copyIndex
+[copyIndex](scripts/arm/arm-storage-account_copy.json)
 
 
 

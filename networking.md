@@ -66,14 +66,29 @@ You can create a VM without NSG associated but it's risky.
 |  Health Probes|TCP, HTTP | TCP, HTTP, HTTPS|
 |  Availability Zones   Support| :x: | :white_check_mark:|
 |  Backend Pool| only if part of Availability Set <br/> or Availability Zones | Also indipendent VM can be added|
+|  Public IP|  Basic/Standard SKU | **Only Standard SKU can be added**|
+| Public IP of the VMs|  Only Public IP with basic SKU | TBV |
 
-Standard: Only public IP with standard SKU can be added 
+### LB Settings
+- Public IP Frontend
+- Backeend pool
+- Health Probe
+- Load Balancing Rules
 
+### Load Balancer Type
 
+- Internal
+- Public
 
-
-### Varius
+### Inbound NAT rules
 NAT - Network Address Tranlation
+Connecting to the VM1 (without public IP) by using the NAT on the IP FrontEnd of the Load Balancer.
+
+Example: 68.219.200.220:49152 (RDP)
+- 68.219.200.220: public IP of the IP FE LB
+- 49152 ephimeral port mapped internally to RDP 3389 of the internal VM
+
+
 
 ## Virtual Network Peering
 - Virtual Network Peering is used to connect two Azure virtual networks together via the backbone network.
