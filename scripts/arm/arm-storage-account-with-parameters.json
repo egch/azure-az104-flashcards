@@ -15,7 +15,7 @@
     },
     "resources": [
         {           
-            "name": "egchstorage",
+            "name": "egchstorage2023",
             "type": "Microsoft.Storage/storageAccounts",
             "location":"[variables('resourceLocation')]",
             "apiVersion": "2021-06-01",

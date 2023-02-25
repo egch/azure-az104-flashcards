@@ -59,7 +59,7 @@ Extract the id of that specific resource.
         }
 ```
 ## Parameters
-If you do not pass at runtime the value, then default value is taken.
+If you do not pass at runtime the value(s), then default value is taken.
 ```json
    "parameters": {
             "storage-sku": {
@@ -98,9 +98,32 @@ $ PS>  New-AzResourceGroupDeployment -ResourceGroupName az-104 -TemplateFile ./s
     },
 ```
 ### copyIndex
+```json
+"resources": [
+        {
+            "name": "[concat('enricosa',copyIndex())]",
+            ...
+            "copy": {
+                "name":"storagecopy",
+                "count": 3
+            }
+        }
+    ]
+```
+
 [copyIndex](scripts/arm/arm-storage-account_copy.json)
 
+### dependsOn
+```json
+"dependsOn": [
+    "[resourceId('Microsoft.Network/networkSecurityGroups', variables('MetworkSG'))]"
+],
+```
 
+## Parameters file
+```powershell
+$ New-AzResourceGroupDeployment -ResourceGroupName az-104 -TemplateFile ./scripts/arm/arm-storage-account-with-parameters.json  -TemplateParameterFile  ./scripts/arm/params-sa.json
+```
 
 ## Various
 - BICEP base templates
