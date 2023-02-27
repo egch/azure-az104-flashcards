@@ -1,5 +1,8 @@
 # Storage Accounts
 ## Types
+![Types](images/storage-account.png)
+
+## Services
 - Blob -> Container
 - Table
 - Queue
@@ -73,7 +76,18 @@ I cannot create a new storage account via the use of Azure Storage Explorer.
 
 ```shell
 $ azcopy make "https://appstore4040.blob.core.windows.net/tmp?sv=2020-08-04&ss=b&srt=sco&sp=rwdlac&se=2021-12-13T14:36:11Z&st=2021-12-13T06:36:11Z&spr=https&sig=RtWuKGVi%2BTp1yW1VNAqgSFMmFtrRrEsQ9f%2BJy7LuIZU%3D"
+
 ```
+
+## Lifecycle Management
+- Storage account
+- Lifecycle management
+- create a rule: (example)
+- move all the new created blob after one day from hot to archive tier
+- select to all the blobs or filter.
+
+_Lifecycle management policies are supported for block blobs and append blobs in general-purpose v2, premium block blob, and Blob Storage accounts. Lifecycle management doesn't affect system containers such as the $logs or $web containers._
+
 ## Various
 
 - Lifecycle Management
