@@ -76,6 +76,8 @@ App Service Environments_
   - resource group
 - Exclusions
 - Tag name/value
+
+Policies are inherited 
 ### Remediation
 - Create a Managed Identity
 

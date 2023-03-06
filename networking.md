@@ -135,10 +135,60 @@ Secure connection between the on premises pc and the VM on its private IP.
 
 ### Gateway subnet
 On the VN I have to install a Gateway SUbnet.
+- VM
+- Virtual Network
+- Subnets
+- (+) Gateway Subnet (can only have one GS for virtual network)
+
 The gateway subnet is part of the virtual network IP address range that you specify when configuring your virtual network. It contains the IP addresses that the virtual network gateway resources and services use.
 
 When you create the gateway subnet, you specify the number of IP addresses that the subnet contains. The number of IP addresses needed depends on the VPN gateway configuration that you want to create. Some configurations require more IP addresses than others. We recommend that you create a gateway subnet that uses a /27 or /28 (or /29.)
+### Virtual Network Gateway
+- Create virtual network gateway
+- link the VNG to the Gateway Subnet
+- create a public IP
+- VNG has a price per hour, variable depending on the Sku, no matter the usage.
 
+### Certificates
+[azure link](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-certificates-point-to-site)
+
+Certificates are needed for authentication to avoid any pc pc in the world can connec to the VNG.
+- New-SelfSignedCertificate (CN=VPNRoot) on the server machine
+- New-SelfSignedCertificate (CN=VPNRoVPNCert) on the client machine
+- the client certificate is generated from the root certificate.
+
+root certificate
+```powershell
+$cert = New-SelfSignedCertificate -Type Custom -KeySpec Signature `
+-Subject "CN=VPNRoot" -KeyExportPolicy Exportable `
+-HashAlgorithm sha256 -KeyLength 2048 `
+-CertStoreLocation "Cert:\CurrentUser\My" -KeyUsageProperty Sign -KeyUsage CertSign
+```
+
+client certificate
+```powershell
+New-SelfSignedCertificate -Type Custom -DnsName P2SChildCert -KeySpec Signature `
+-Subject "CN=VPNCert" -KeyExportPolicy Exportable `
+-HashAlgorithm sha256 -KeyLength 2048 `
+-CertStoreLocation "Cert:\CurrentUser\My" `
+-Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
+```
+
+#### Export the certificate
+- Manage user certificates
+- root certiticate
+- export (.CER)
+- save in a file
+
+### Virtual Network Gateway Configuration
+- Point-to-site configuration
+- Address pool: 172.16.0.0/16
+- Authentication Type: Azure
+
+- tunnel type (IKEv2)
+- link the root certificate before created (public)-> copy the content of the file before exported
+- any client which needs to have the PointToSite VPN connection needs to have the client certificate installed.
+- download vpn client form the VNG (link)
 
 ## Site-to-Site VPN Connection
 Azure VPN gateways provide cross-premises connectivity between customer premises and Azure.
