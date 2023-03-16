@@ -195,53 +195,16 @@ Azure VPN gateways provide cross-premises connectivity between customer premises
 
 Site-to-site VPN gateway connection from your on-premises network to the VNet.
 
-## Network Watcher/
-- **Connection Monitor**: check network connectivity between machines
-- **Next hop**: next route for a packet of data
-- **IP Flow Verify**: check if traffic is allowed to/from a VM
-- **Connection troublehsoot**: 
-- **NSG Diagnostic**
-- **Traffic Analyitics**
-- **NSG Flow Logs**
-- **Network Watcher variable packet capture**
+## Azure Virtual WAN
+1. Create Virtual WAN from marketplace
+2. WM/Create Virtual Hub
+3. Create the VPN sites
+4. Connect the VPN sites to the Virtual Hub
 
-### Connection troublehsoot
-- VM / connection troubleshoot
-- Azure Network watcher extension
-### Connection Monitor
-- Network Watcher/Connection Monitor
-- Data is stored into Log Analytics Workspace
-- Source/Destination/Test Configuration
-### IP Flow verify
-Check if traffic is allowed to/from a VM
-- Network Watcher/IP Flow verify
-- Target vm port 80
-- remote ip address: my IP (217.162.243.60)
-### Next Hop
-- Network Watcher/Next Hop
-- from Azure VM to my IP
-- Next hop type: Internet
-
----
-- from vm1 (private IP) to vm2 (private IP)
-- Next hop type: VirtualNetwork
-
-### NSG Diagnostic - 176
-The Network Security Group (NSG) Diagnostics tool provides detailed information to understand and debug the security configuration of your network.  
-Network Watcher / NSG diagnostic
-
- Network Watcher/NSG Diagnostic
-### NSG Flow Logs - 177
-- Network Watcher/NSG Flow Logs
-- NSG
-- Requires storage account & Log Analytic Workspace
-- in the folder of storage account you will find the log file, i.e. PT1H.json
-- Log format in the MS documentation
-- Network Watcher | Traffic Analytics
-
-
-
-
-
-
-
+## User Defined Routes
+- **Scenario**: CentralVM, subnet A(vmA), subnet B(vmB).
+- Route Tables
+- VM/Network Interface/Effective Routes
+- Central VM / IP forward enabled
+- On Central VM enabling forward at OS level
+- now from vmA I can reach VMB through central VM

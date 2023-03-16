@@ -58,7 +58,7 @@ Only with AD P1 or P2
 ## Conditional Access Policies
 Only with AAD P2/P1.
 
-Conditional Policy
+Conditional Policy/Grant
 
 Example: I want users ONLY with MFA enabled.
 
