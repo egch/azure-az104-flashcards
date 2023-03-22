@@ -50,3 +50,5 @@ _Multiple site hosting enables you to configure more than one web application on
 ## Application Gateway - WAF
 Azure Web Application Firewall (WAF) on Azure Application Gateway provides centralized protection of your web applications from common exploits and vulnerabilities. Web applications are increasingly targeted by malicious attacks that exploit commonly known vulnerabilities. **SQL injection and cross-site scripting** are among the most common attacks.
 
+[WAF](https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/ag-overview)
+

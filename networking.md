@@ -50,10 +50,18 @@ NSG can be attached to:
 |:----------|-------------:|
 |  Network interface  | :white_check_mark: |
 |  Subnet  | :white_check_mark: |
-|  VM  | :white_check_mark: |
 |  Virtual Network  |  :x: |
 
 You can create a VM without NSG associated but it's risky.
+
+
+  
+
+<figure>
+  <img src="images/nsg.png" width="40%" /> 
+  <figcaption>Example of NSG connections</figcaption>
+</figure>
+
 
 
 ## Load Balancer
