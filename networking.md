@@ -101,32 +101,7 @@ Example: 68.219.200.220:49152 (RDP)
 
 - The virtual networks can't have overlapping CIDR blocks.
 
-## Application Gateway
 
-### Features
-- OSI Layer 7 
-- Web application Firewall feature
-- SSL/TLS
-- Autoscaling
-- Session affinity
-### Components
-- Frontend IP address
-- Listener:
-    - Basic
-    - Multi site
-- Routing Roules
-    - Basic
-    - Path-based
-- Backeend pools
-- Health Probes
-
-### What is Azure Application Gateway?
-Azure Application Gateway is a web traffic load balancer that enables you to manage traffic to your web applications. Traditional load balancers operate at the transport layer (OSI layer 4 - TCP and UDP) and route traffic based on source IP address and port, to a destination IP address and port.
-
-Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example URI path or host headers. For example, you can route traffic based on the incoming URL. So if /images is in the incoming URL, you can route traffic to a specific set of servers (known as a pool) configured for images. If /video is in the URL, that traffic is routed to another pool that's optimized for videos.
-
-### Application Gateway - WAF
-Azure Web Application Firewall (WAF) on Azure Application Gateway provides centralized protection of your web applications from common exploits and vulnerabilities. Web applications are increasingly targeted by malicious attacks that exploit commonly known vulnerabilities. SQL injection and cross-site scripting are among the most common attacks.
 
 ## Point-to-Site VPN Connection
 A Point-to-Site (P2S) VPN gateway connection lets you create a secure connection to your virtual network from an individual client computer. A P2S connection is established by starting it from the client computer.
