@@ -93,3 +93,14 @@ _Lifecycle management policies are supported for block blobs and append blobs in
 - Lifecycle Management
 - Object Replication
     - Object Replication Rules
+
+
+## Backup Vault - Azure Blob backup
+Continuous backups: You can configure operational backup, a managed local data protection solution, to protect your block blobs from accidental deletion or corruption. The data is stored locally within the source storage account and not transferred to the **backup vault**. You don’t need to define any schedule for backups. All changes are retained, and you can restore them from the state at a selected point in time.
+
+Periodic backups (preview): You can configure vaulted backup, a managed offsite data protection solution, to get protection against any accidental or malicious deletion of blobs or storage account. The backup data using vaulted backups is copied and stored in the **Backup vault** as per the schedule and frequency you define via the backup policy and retained as per the retention configured in the policy.
+
+### Steps
+- storage account
+- data protection
+- enable operational backup with azure backup

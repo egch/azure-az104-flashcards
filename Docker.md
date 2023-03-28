@@ -14,7 +14,7 @@ COPY ./index.html /usr/share/nginx/html/index.html
 ### Commands
 To be executed from the folder [docker-example](docker-example)
 ```shell
-$ sudo az acr login --name appregistryegch
+$ az acr login --name egchregistry --username egchregistry --password xyz
 $ sudo docker build -t my-nginx docker-example
 $ sudo docker tag myapp appregistryegch.azurecr.io/my-nginx
 $ sudo docker push appregistryegch.azurecr.io/my-nginx
@@ -36,6 +36,8 @@ A container group is a collection of containers that get scheduled on the same h
 The containers in a container group share a lifecycle, resources, local network, and storage volumes.
 
 Multi-container groups are currently restricted to Linux containers.
+
+_Init containers run to completion before the application container or containers start. Similar to Kubernetes init containers, use one or more init containers to perform initialization logic for your app containers, such as setting accounts, running setup scripts, or configuring databases._
 
 ### Credits
 [Running the NGINX Server in a Docker Container](https://www.baeldung.com/linux/nginx-docker-container)

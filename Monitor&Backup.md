@@ -37,7 +37,6 @@ Application Insights provides other features including, but not limited to:
 [Azure Application Insights Tutorial | Amazing telemetry service](https://www.youtube.com/watch?v=A0jAeGf2zUQ&t=541s)
 
 
-## Backup Feature - 284
 ## Backup Service
 You need a Recovery Service vault in the **same location**.
 - backup policy
@@ -58,7 +57,7 @@ You need a Recovery Service vault in the **same location**.
 
 ### Backup Restore
 - File Restore
-- VM Restore (need a storage account in the same location):
+- VM Restore (youneed a storage account in the same location):
     - new VM
     - replace existing
 
@@ -78,6 +77,8 @@ In case of new VM there won't be any NSG linked to the new VM.
 - stop backup
 - delete backup data
 
+### Variuos
+- File Recovery: select restore point / download the exec
 
 
     
@@ -99,4 +100,12 @@ In case of new VM there won't be any NSG linked to the new VM.
 
 ### Backup Retention
 ### Mars Agent Installer
+- MARS: Microsoft Azure Recovery Serviceszx
+- Create a resource: Backup and Site Recovery
+- Properties
+- Recovery Services Agent/Download
 ### Azure file share backup
+
+## Azure Site Recovery
+- Disaster Recovery
+- Cache Storage Account

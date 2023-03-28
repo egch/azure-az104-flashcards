@@ -63,3 +63,7 @@ If the Azure built-in roles don't meet the specific needs of your organization, 
 - User Access Administrator Role
 - Custom Role (from RG)
 
+## self-service password reset Administrators
+By default, administrator accounts are enabled for self-service password reset, and a strong default two-gate password reset policy is enforced.   
+With a two-gate policy, administrators don't have the ability to use security questions.
+
