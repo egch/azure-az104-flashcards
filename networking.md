@@ -171,8 +171,15 @@ New-SelfSignedCertificate -Type Custom -DnsName P2SChildCert -KeySpec Signature 
 - tunnel type (IKEv2)
 - link the root certificate before created (public)-> copy the content of the file before exported
 - any client which needs to have the PointToSite VPN connection needs to have the client certificate installed.
-- download vpn client form the VNG (link)
 
+
+###  Configuring the client
+- install the (before generated) client certificate
+- download and install the vpn client from the azure virtual Network Gateway before configured (link).
+- start the vpn client and connect
+
+### Resources
+[Azure Point-to-Site VPN with Certificate Based Authentication](https://www.youtube.com/watch?v=Yshpo6V1qUQ&t=1s)
 ## Site-to-Site VPN Connection
 Azure VPN gateways provide cross-premises connectivity between customer premises and Azure.
 

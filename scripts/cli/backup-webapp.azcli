@@ -1,0 +1,10 @@
+# Create a Storage Account
+
+az storage account create --name egchsa --resource-group az-104 --location northeurope --sku "Standard_LRS"
+
+az storage container create --name backup --account-name egchsa
+
+
+## Plus several other parameters
+az webapp config backup update --resource-group az-104 --webapp-name egch69 \
+--frequency 1d --retain-one true --retention 10

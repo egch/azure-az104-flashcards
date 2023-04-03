@@ -38,6 +38,15 @@ If a VM is deleted then it will disappear from the list of zones.
 
 ![Virtual Network](images/virtual-network.png)
 
+### CLI configuration
+```shell
+az network private-dns zone create -g MyAzureResourceGroup \
+   -n private.contoso.com
+
+az network private-dns link vnet create -g MyAzureResourceGroup -n MyDNSLink \
+   -z private.contoso.com -v myAzureVNet -e true
+```
+
 
 
 ## Azure Local DNS

@@ -8,14 +8,17 @@ webapp - fixed sufix: .azurewebsites.net.
 Example: 
 <em>egchwa.azurewebsites.net</em>
 
-![App Service Plan](images/app-service-plan.webp)
+### App Service Plan Comparison
+![App Service Plan](images/app-service-plans.png)
 
 
-## Deployment Slots
+**Backup and restore are supported in Basic or higher**
+
+### Deployment Slots
 Service Plan: Standard or higher.  
 Add slot/Swap
 
-## AutoScaling
+### AutoScaling
 Service Plan: Standard or higher.  
 
 |  PLan | Scaling | 
@@ -26,22 +29,22 @@ Service Plan: Standard or higher.
 Rule: cpu/memory  
 Max instance count
 
-## Virtual Network Integration
+### Virtual Network Integration
 Service Plan: Basic or higher.  
 Connecting webapp to a private network, for instances to access to a DB.
 
-## Custom Domains
+### Custom Domains
 Service Plan: Shared or higher.  
 Add to your domain provider the following two DNS entries:
 - A record
 - TXT record
 
-## SSL
+### SSL
 Service Plan: Basic or higher.  
 WebApp/SSL/Create App Service Managed Certificate  
 Binding
 
-## Backups
+### Backups
 - Service Plan: Standard or higher.  
 - Storage Account is needed
 
