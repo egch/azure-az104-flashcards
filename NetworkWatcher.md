@@ -7,13 +7,20 @@
 - **Traffic Analyitics**
 - **NSG Flow Logs**
 - **Network Watcher variable packet capture**
+
+## Connection troubleshoot
+Network Watcher connection troubleshoot provides the capability to check a direct TCP or ICMP connection from a virtual machine (VM), application gateway, or Bastion host to a VM, fully qualified domain name (FQDN), URI, or IP address.
+
+
 ## Connection Monitor
 - Specific for a given region
 - check connectivity between 2 VMs
 - Network Watcher/Connection Monitor
 - Data is stored into Log Analytics Workspace
 - Test grp/Source/Destination/Test Configuration
-- VM needs to install the _Network Watcher Agent for Windows_
+- VM needs to install network watcher agent:
+    - linux: _Network Watcher Agent for Linux_ 
+    - windows: _Network Watcher Agent for Windows_ 
 
 
 ## IP Flow verify
@@ -21,14 +28,16 @@ Check if traffic is allowed to/from a (single) VM
 - Network Watcher/IP Flow verify
 - Target vm port 80
 - remote ip address: my IP (217.162.243.60)
+
 ## Next Hop
+Next hop is a routing term that refers to the next closest router a packet can go through.
 - Network Watcher/Next Hop
 - from Azure VM to my IP
 - Next hop type: Internet
 
-![Next Hop](images/next-hop.png)
+<image src="images/next-hop.png" width="40%" />   
 
-
+### Next Hop VirtualNetwork
 - from vm1 (private IP) to vm2 (private IP)
 - Next hop type: VirtualNetwork
 
@@ -40,7 +49,7 @@ Network Watcher/NSG Diagnostic
 ## NSG Flow Logs - 177
 - Network Watcher/NSG Flow Logs
 - NSG
-- Requires storage account & Log Analytic Workspace
+- **Requires storage account & Log Analytic Workspace**
 - in the folder of storage account you will find the log file, i.e. PT1H.json
 - Log format in the MS documentation
 - Network Watcher | Traffic Analytics
