@@ -46,13 +46,17 @@ The Network Security Group (NSG) Diagnostics tool provides detailed information 
 Network Watcher / NSG diagnostic
 
 Network Watcher/NSG Diagnostic
-## NSG Flow Logs - 177
+## NSG Flow Logs - 181
 - Network Watcher/NSG Flow Logs
 - NSG
 - **Requires storage account & Log Analytic Workspace**
 - in the folder of storage account you will find the log file, i.e. PT1H.json
 - Log format in the MS documentation
 - Network Watcher | Traffic Analytics
+- Ensure to register to Microsoft.Insights resource provider
+
+### Microsoft.Insights
+Microsoft.Insights is the resource provider namespace for Azure Monitor which provides features such as metrics, diagnostic logs, activity logs, autoscale, and metric alerts. 
 
 
 
