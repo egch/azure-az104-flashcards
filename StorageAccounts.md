@@ -46,6 +46,10 @@ Data copied locally through ZRS.
 - Cool
 - Archive (Only Blob level)
 
+## Versioning
+- data protection
+- enable versioning
+
 
 ## Azure File shares
 - connect local drive
@@ -77,7 +81,20 @@ I cannot create a new storage account via the use of Azure Storage Explorer.
 ```shell
 $ azcopy make "https://appstore4040.blob.core.windows.net/tmp?sv=2020-08-04&ss=b&srt=sco&sp=rwdlac&se=2021-12-13T14:36:11Z&st=2021-12-13T06:36:11Z&spr=https&sig=RtWuKGVi%2BTp1yW1VNAqgSFMmFtrRrEsQ9f%2BJy7LuIZU%3D"
 
+$ azcopy copy app.yml "https://appstore35545.blob.core.windows.net/data/app.yml?sv=2021-06-08&ss=b&srt=sco&sp=rwdlaciytfx&se=2023-01-27T21:10:21Z&st=2023-01-27T13:10:21Z&spr=https&sig=OCyNZlTtxO5aFpppfnk6WLEXW%2BqouaTFavnIFg67zXM%3D"
+
+$ azcopy copy  "https://appstore35545.blob.core.windows.net/data/app.yml?sv=2021-06-08&ss=b&srt=sco&sp=rwdlaciytfx&se=2023-01-27T21:10:21Z&st=2023-01-27T13:10:21Z&spr=https&sig=OCyNZlTtxO5aFpppfnk6WLEXW%2BqouaTFavnIFg67zXM%3D" .
+
+
 ```
+### AzCopy authorization
+
+|Storage Type | Authorization |
+|:----------|:----------|
+|Blob storage |	Azure AD & SAS |
+|File storage |	SAS only |
+
+
 
 ## Lifecycle Management
 - Storage account
