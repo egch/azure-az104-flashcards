@@ -67,6 +67,8 @@ The Custom Script Extension integrates with Azure Resource Manager templates. Yo
 Follow the same steps as described [here](#Lab-Custom-Script-Extenson-web-server-Windows) to deploy this [file](scripts/custom-script-extension/install-nginx.sh) in order to install nginx on a ubuntu vm.
 ## VM Boot Diagnostics
 //TBD
+## VM Run Command
+//TBD
 
 
 ## VM Availability Zones - 49
