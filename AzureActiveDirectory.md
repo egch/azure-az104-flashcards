@@ -44,6 +44,8 @@ When you connect a Windows device with Azure AD using an Azure AD join, Azure AD
 * The Azure AD joined device local administrator role
 * The user performing the Azure AD join
 
+[Azure AD joined devices](https://learn.microsoft.com/en-us/azure/active-directory/devices/assign-local-admin#how-it-works)
+
 ### Dynamic Device Groups
 You can create a dynamic device group that contains your Cloud PCs. Policies targeting this device group will target all or some Cloud PCs, depending on the rules you configure.
 

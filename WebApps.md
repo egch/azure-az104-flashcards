@@ -50,7 +50,17 @@ Binding
 
 Restore a prev state into a new webapp.
 
-Storage Account is required for custom backup
+Storage Account is required for custom backup.
+
+
+<figure>
+  <img src="images/backup-webapp.png" width="30%" /> 
+  <figcaption>Scheduled backup</figcaption>
+</figure>
+
+
+### Zone Redundancy
+Only Premium
 
 ## Web App Logging
 Webapp:

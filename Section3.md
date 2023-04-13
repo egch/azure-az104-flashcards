@@ -45,7 +45,13 @@ Follow the same steps as described [here](#Lab-Custom-Script-Extenson-web-server
 ## VM Boot Diagnostics
 //TBD
 ## VM Run Command
-//TBD
+VM/Run Commmand/RunPowerShellScript
+
+Example-adding http server
+```powershell
+import-module servermanager
+add-windowsfeature web-server -includeallsubfeature
+```
 
 
 ## VM Availability Zones - 49
