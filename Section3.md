@@ -24,29 +24,6 @@ $ chmod 400 vm-ubuntu-ssh_key.cer
 $ ssh -i vm-ubuntu-ssh_key.cer enrico@13.79.186.11
 
 ```
-## Disk Types
-<details>
-
-- Standard HDD
-- Standard SSD
-- Premium SSD
-- Ultra Disk
-
-</details>
-
-## Disks Snapshot
-
-## Disk Encryption
-* ADE - Azure Disk Encryption.
-
-* ADE uses BitLocker for encryption of Windows VMs, and the dm-crypt feature for Linux VMs.
-
-* SSE with PMK - Server Side Encryption with Platform Manager Key.
-
- * Customer Keys for encrption with Azure Key Vault
-
- ### Encryption at REST
- _Encryption at rest is designed to prevent the attacker from accessing the unencrypted data by ensuring the data is encrypted when on disk. If an attacker obtains a hard drive with encrypted data but not the encryption keys, the attacker must defeat the encryption to read the data._
 
 ## Custom Script Extensions
 The Custom Script Extension downloads and runs scripts on Azure virtual machines (VMs). This extension is useful for post-deployment configuration, software installation, or any other configuration or management task. You can download scripts from Azure Storage or GitHub, or provide them to the Azure portal at extension runtime.
