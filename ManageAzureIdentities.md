@@ -41,6 +41,12 @@ Management groups are containers that help you manage access, policy, and compli
 
 **Tags cannot be applied to Mgmt group!**
 
+## Failed questions
+- Tools used to create administrative units:
+   1. Azure AD Portal
+   2. PowerShell
+   3. Microsoft Graph
+
 ---
 
 [Home](README.md)

@@ -126,6 +126,13 @@ On the VN I have to install a Gateway SUbnet.
 The gateway subnet is part of the virtual network IP address range that you specify when configuring your virtual network. It contains the IP addresses that the virtual network gateway resources and services use.
 
 When you create the gateway subnet, you specify the number of IP addresses that the subnet contains. The number of IP addresses needed depends on the VPN gateway configuration that you want to create. Some configurations require more IP addresses than others. We recommend that you create a gateway subnet that uses a /27 or /28 (or /29.)
+
+<figure>
+  <img src="images/gateway-subnet.png" width="70%" /> 
+  <figcaption>Gateway subnet</figcaption>
+</figure>
+
+
 ### Virtual Network Gateway
 - Create virtual network gateway
 - link the VNG to the Gateway Subnet

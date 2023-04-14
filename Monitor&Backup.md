@@ -32,6 +32,11 @@ Application Insights provides other features including, but not limited to:
 - Usage – understand which features are popular with users and how users interact and use your application
 - Smart Detection – automatic failure and anomaly detection through proactive telemetry analysis
 
+### Monitor components for Insight
+- Connectivity
+- Traffic
+- Network health & metrics
+
 ### References
 
 [Azure Application Insights Tutorial | Amazing telemetry service](https://www.youtube.com/watch?v=A0jAeGf2zUQ&t=541s)

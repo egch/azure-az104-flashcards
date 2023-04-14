@@ -50,6 +50,11 @@ Data copied locally through ZRS.
 - data protection
 - enable versioning
 
+## Failed questions
+1. Transport Layer Security (TLS) not supported: 1.3
+2. 
+
+
 
 ## Azure File shares
 - connect local drive

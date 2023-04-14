@@ -6,14 +6,14 @@
         "vm-name": {
             "type": "string",
             "metadata": {
-                "description": "Please tuype the name of the VM"
+                "description": "Please type the name of the VM"
             }
         },
 
          "virtual-network": {
             "type": "string",
             "metadata": {
-                "description": "Please tuype the name of the Virtual Network"
+                "description": "Please type the name of the Virtual Network"
             }
         },
 

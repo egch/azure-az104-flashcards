@@ -10,7 +10,12 @@ Type **A** Record Points to IP.
 
 I map my domain to the public IP of my VM, through an A record in the DNS section of my domain configuration.
 
-![GoDaddy](images/dns-A-record.png)
+
+<figure>
+  <img src="images/dns-A-record.png" width="80%" /> 
+  <figcaption>DNS A record</figcaption>
+</figure>
+
 
 ## Difference NS vs A record
 Q: what is the difference between **A** and **NS** record in a website domain?

@@ -35,6 +35,9 @@ Exam AZ-104: Microsoft Azure Administrator - flashcards
 [Scripts](scripts)
 
 
+
+
+
 ## Azure VM
 
 ### Build a Linux VM
