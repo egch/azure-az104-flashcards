@@ -48,6 +48,7 @@ Azure Key Vault is a cloud service that provides a secure store for secrets. You
 
 
 ## Adding Data Disks to VM VM with Power Shell
+:bangbang:
 ```powershell
 $resourcegroup = 'az-104'
 $machinename = 'enrico-win-vm'

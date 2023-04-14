@@ -110,6 +110,16 @@ $ azcopy copy  "https://appstore35545.blob.core.windows.net/data/app.yml?sv=2021
 
 _Lifecycle management policies are supported for block blobs and append blobs in general-purpose v2, premium block blob, and Blob Storage accounts. Lifecycle management doesn't affect system containers such as the $logs or $web containers._
 
+## Public network access
+Storage account / Networking :bangbang:
+
+<figure>
+  <img src="images/storageaccount-public-access.png" width="60%" /> 
+  <figcaption>Limit access to storage account</figcaption>
+</figure>
+
+
+
 ## Various
 
 - Lifecycle Management

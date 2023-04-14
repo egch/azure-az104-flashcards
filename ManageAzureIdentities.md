@@ -19,6 +19,9 @@ App Service Environments_
 - Tag name/value
 
 Policies are inherited 
+
+### Not allowed resource types 
+Not allowed resource types (Deny): Prevents a list of resource types from being deployed. - so these resources cannot be modified. :bangbang:
 ### Remediation
 - Create a Managed Identity
 

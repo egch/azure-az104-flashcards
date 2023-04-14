@@ -13,6 +13,11 @@ Network Watcher connection troubleshoot provides the capability to check a direc
 
 
 ## Connection Monitor
+
+Connection Monitor monitors communication at regular intervals. It informs you of changes in reachability and latency. You can also check the current and historical network topology between source agents and destination endpoints.
+
+Sources can be Azure VMs/ scale sets or on-premises machines that have an installed monitoring agent. :bangbang:
+
 - Specific for a given region
 - check connectivity between 2 VMs
 - Network Watcher/Connection Monitor

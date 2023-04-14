@@ -59,6 +59,10 @@ The User Access Administrator role enables the user to grant other users access 
 ## Custom Roles
 If the Azure built-in roles don't meet the specific needs of your organization, you can create your own custom roles. Just like built-in roles, you can assign custom roles to users, groups, and service principals at management group (in preview only), subscription, and resource group scopes.
 
+## Built in Roles
+### Storage Account
+**Storage Blob Data Owner**: Provides full access to Azure Storage blob containers and data, including assigning POSIX access control. :bangbang:
+
 ## Various
 - User Access Administrator Role
 - Custom Role (from RG)

@@ -132,6 +132,13 @@ $ New-AzResourceGroupDeployment -ResourceGroupName az-104 -TemplateFile ./script
 - [Custom Scripts Extension](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/custom-script-windows)
 
 
+## How to use ARM deployment templates with Azure CLI 
+:bangbang:
+```shell
+$ az deployment group create --resource-group <resource-group-name> --template-file <path-to-template>
+```
+
+
 ## Links
 [Understand the structure and syntax of ARM template](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/syntax)
 

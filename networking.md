@@ -187,10 +187,15 @@ New-SelfSignedCertificate -Type Custom -DnsName P2SChildCert -KeySpec Signature 
 
 ### Resources
 [Azure Point-to-Site VPN with Certificate Based Authentication](https://www.youtube.com/watch?v=Yshpo6V1qUQ&t=1s)
+
 ## Site-to-Site VPN Connection
 Azure VPN gateways provide cross-premises connectivity between customer premises and Azure.
 
 Site-to-site VPN gateway connection from your on-premises network to the VNet.
+
+### To modify the gateway IP address for a local network gateway
+If the VPN device that you want to connect to has changed its public IP address, you need to modify the **local network gateway** to reflect that change. :bangbang:
+
 
 ## Azure Virtual WAN
 1. Create Virtual WAN from marketplace

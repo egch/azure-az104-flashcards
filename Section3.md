@@ -55,7 +55,7 @@ add-windowsfeature web-server -includeallsubfeature
 
 
 ## VM Availability Zones - 49
-Availability Zones are unique physical locations within an Azure region. Zone-redundant services replicate your applications and data across Availability Zones to protect from single-points-of-failure. With Availability Zones, Azure offers industry best **99.99%** VM uptime SLA.
+Availability Zones are unique physical locations within an Azure region. Zone-redundant services replicate your applications and data across Availability Zones to protect from single-points-of-failure. With Availability Zones, Azure offers industry best **99.99%** VM uptime SLA. :bangbang:
 
 There aint't additional cost to add avaiability zones but there is bandwidth cost.
 
