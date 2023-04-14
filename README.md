@@ -4,6 +4,8 @@ Exam AZ-104: Microsoft Azure Administrator - flashcards
 
 [Deploy and Manage Azure compute resources](Section3.md)
 
+[Data Disks](DataDisk.md)
+
 [Docker](Docker.md)
 
 [Kubernetes](Kubernetes.md)
@@ -12,17 +14,29 @@ Exam AZ-104: Microsoft Azure Administrator - flashcards
 
 [Networking](networking.md)
 
+[Firewall](firewall.md)
+
+[Application Gateway](application-gateway.md)
+
 [DNS](dns.md)
 
 [Storage Accounts](StorageAccounts.md)
 
+[Storage Accounts Backup](StorageAccountsBackup.md)
+
 [Manage Azure Identities](ManageAzureIdentities.md)
+
+[Role Based Access Control - RBAC](RoleBasedAccessControl.md)
 
 [Resource locks](resource-locks.md)
 
 [Azure Active Directory](AzureActiveDirectory.md)
 
 [Monitor & Backup](Monitor&Backup.md)
+
+[Network Watcher](NetworkWatcher.md)
+
+[Log Analytics Worksapce](LogAnalyticsWorkspace.md)
 
 [Powershell](Powershell.md)
 
