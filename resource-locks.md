@@ -9,7 +9,8 @@
 - Subscription Level
 
 With the read only lock I cannot even stop/start the VM.  
-Locks are inherited. 
+Locks are inherited.  
+Resource with Locks can still be moved to other resource group :bangbang:
 
 ## Resource Tags
 

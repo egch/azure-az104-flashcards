@@ -54,6 +54,11 @@ On the existing resources they will be marked as not policiy compliant.
 ## Management Groups
 Management groups are containers that help you manage access, policy, and compliance across multiple subscriptions. Create these containers to build an effective and efficient hierarchy that can be used with Azure Policy and Azure Role Based Access Controls.
 
+<figure>
+  <img src="images/scope-levels.png" width="70%" /> 
+  <figcaption>Management Groups</figcaption>
+</figure>
+
 **Tags cannot be applied to Mgmt group!**
 
 ## Failed questions
