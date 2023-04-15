@@ -10,16 +10,16 @@
     - Traffic
     - Network health and metrics
 
-### Quick look - 272
+### Quick look
 - Diagnostic Settings
 - Metrics
 - Insights
 - Alerts:
     - metrics
     - activity log
-### Alert - 273
+### Alert
 - Alert rule (condition/event)
-- Action Gropus (what to do, i.e. email/sms)
+- Action Groups (what to do, i.e. email/sms)
 
 
 
@@ -52,7 +52,7 @@ You need a Recovery Service vault in the **same location**.
 - File-System consistent
 - Crash consistent
 
-### Backup VMs Sequence
+### Backup VMs Sequence :bangbang:
 1. Backup Center
 2. Recovery Services Vault
 3. Backup

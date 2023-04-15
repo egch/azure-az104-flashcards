@@ -20,6 +20,9 @@ App Service Environments_
 
 Policies are inherited 
 
+Can you assign the Azure Policy exclusion at the Tenant Root Group Level? **NO** :bangbang:
+
+
 ### Not allowed resource types 
 Not allowed resource types (Deny): Prevents a list of resource types from being deployed. - so these resources cannot be modified. :bangbang:
 ### Remediation
@@ -27,6 +30,15 @@ Not allowed resource types (Deny): Prevents a list of resource types from being 
 
 If I try to create a new resource this needs to be compliant.
 On the existing resources they will be marked as not policiy compliant.
+
+### Policy assigment
+| Level  |      Policy   | 
+|----------|:-------------:|
+| Tenant |  :x: | 
+| Mgmt group|    :white_check_mark:   |  
+| Subscription|    :white_check_mark:  |  
+| Resource Group|    :white_check_mark:   |  
+| Resource|    :x:   |  
 
 ## Administrative Units
 - MS Graph

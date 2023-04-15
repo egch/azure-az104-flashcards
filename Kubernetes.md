@@ -14,6 +14,9 @@
 ## Azure Containier Instances
 - enable admin user on container registry
 - can connect to either azure registry or docker hub
+
+### Azure CNI - Container Networking Interface
+Azure CNI (Container Networking Interface) is a networking plugin for Kubernetes clusters running on Microsoft Azure that enables container networking. CNI provides a standardized way for network providers to integrate with container runtimes, allowing containers to communicate with each other and with the outside world. :bangbang:
 ### Azure Containier Groups
 
 ### Attach files to POD

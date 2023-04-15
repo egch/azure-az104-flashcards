@@ -18,6 +18,8 @@ https://egchsa.blob.core.windows.net/mystoragecontainer/draft-arch.jpeg
 - Standard
 - Premium
 
+You can only create Premium files shares in the **FileStorage** account. :bangbang:
+
 ## Authentication
 - Azure subscribtion
 - Access Keys (1 or 2)
@@ -46,13 +48,15 @@ Data copied locally through ZRS.
 - Cool
 - Archive (Only Blob level)
 
+Access tiers are supported for both General Purpose V2 and Blob Storage account types in Azure. :bangbang:
+
 ## Versioning
 - data protection
 - enable versioning
 
 ## Failed questions
 1. Transport Layer Security (TLS) not supported: 1.3
-2. 
+
 
 
 
@@ -70,7 +74,7 @@ https://egchsa.file.core.windows.net/container/fileName
 - Page Blobs - only LRS
 
 ## Copying Data
-- Azure Import/Export Service
+- Azure Import/Export Service :bangbang:
 - Azure Data Box
 
 ## Azure Storage Explorer
