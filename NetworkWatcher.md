@@ -63,6 +63,13 @@ Network Watcher/NSG Diagnostic
 ### Microsoft.Insights
 Microsoft.Insights is the resource provider namespace for Azure Monitor which provides features such as metrics, diagnostic logs, activity logs, autoscale, and metric alerts. 
 
+- Network health and metrics
+- Connectivity
+- Traffic
+
+:bangbang:
+
+
 
 
 

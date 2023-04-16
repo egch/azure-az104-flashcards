@@ -62,6 +62,13 @@ You can create a VM without NSG associated but it's risky.
   <figcaption>Example of NSG connections</figcaption>
 </figure>
 
+### Default NSG
+Nothing possible from external :bangbang:
+
+<figure>
+  <img src="images/defaultNSG.png" width="80%" /> 
+  <figcaption>Default NSG</figcaption>
+</figure>
 
 
 ## Load Balancer
@@ -195,7 +202,8 @@ Site-to-site VPN gateway connection from your on-premises network to the VNet.
 
 ### To modify the gateway IP address for a local network gateway
 If the VPN device that you want to connect to has changed its public IP address, you need to modify the **local network gateway** to reflect that change. :bangbang:
-
+## VNet to VNet
+Connecting a virtual network to another virtual network using the VNet-to-VNet connection type is similar to creating a Site-to-Site IPsec connection to an on-premises location. Both connectivity types use a VPN gateway to provide a secure tunnel using IPsec/IKE, and both function the same way when communicating. 
 
 ## Azure Virtual WAN
 1. Create Virtual WAN from marketplace
