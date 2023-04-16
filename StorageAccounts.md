@@ -64,7 +64,28 @@ Access tiers are supported for both General Purpose V2 and Blob Storage account 
 - connect local drive
 - Azure File Sync Service 
 
-### Azure Files Sync 
+## Azure Files Sync 
+1. Create Azure File Sync
+2. Create a strorage account
+   1. Create a new Files Shares
+
+3. Create a Sync Group
+   1. Link the group to the just created file shares
+
+4. Connect to a window VM
+   1. Download the: File Sync Agent
+   2. Connect to the Azure File Sync from the agent
+
+5. From the Azure File Sync
+   1. registered servers: VMs connected
+   2. Add one or more server endpoint: folder to be sync in a specific vm
+   3. Ideally one server endpoint for each vm/folder
+
+6. Now the files created acrosss the different VMs are synchronized
+
+In a Sync Group, you can have only one cloud endpoint (file share) :bangbang:
+
+
 ### File Shares URL
 https://egchsa.file.core.windows.net/container/fileName
 
