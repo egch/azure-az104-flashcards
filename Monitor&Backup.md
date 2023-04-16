@@ -114,3 +114,11 @@ In case of new VM there won't be any NSG linked to the new VM.
 ## Azure Site Recovery
 - Disaster Recovery
 - Cache Storage Account
+
+You can use the Azure Site Recovery tool to move the on-premises servers to Azure. :bangbang:
+### Azure Site Recovery Lab
+- vm / Disaster recovery
+- Target region
+
+
+  

@@ -119,12 +119,12 @@ $ azcopy copy  "https://appstore35545.blob.core.windows.net/data/app.yml?sv=2021
 ```
 ### AzCopy authorization
 
-|Storage Type | Authorization |
-|:----------|:----------|
-|Blob storage |	Azure AD & SAS |
-|File storage |	SAS only |
+<figure>
+  <img src="images/azcopy-authorization.png" width="80%" /> 
+  <figcaption>azcopy authorization</figcaption>
+</figure>
 
-
+:bangbang:
 
 ## Lifecycle Management
 - Storage account

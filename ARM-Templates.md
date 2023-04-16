@@ -125,6 +125,16 @@ $ PS>  New-AzResourceGroupDeployment -ResourceGroupName az-104 -TemplateFile ./s
 $ New-AzResourceGroupDeployment -ResourceGroupName az-104 -TemplateFile ./scripts/arm/arm-storage-account-with-parameters.json  -TemplateParameterFile  ./scripts/arm/params-sa.json
 ```
 
+## Deply vm - section
+```json
+         "imageReference": {
+                        "publisher": "MicrosoftWindowsServer",
+                        "offer": "WindowsServer",
+                        "sku": "2019-datacenter-gensecond",
+                        "version": "latest"
+                    },
+```
+offer/sku: :bangbang:
 ## Various
 - BICEP base templates
 - API version
