@@ -39,6 +39,11 @@ Add to your domain provider the following two DNS entries:
 - A record
 - TXT record
 
+<figure>
+  <img src="images/webapp-dns-godaddy.png" width="50%" /> 
+  <figcaption>webapp - custom domain</figcaption>
+</figure>
+
 ### SSL
 Service Plan: Basic or higher.  
 WebApp/SSL/Create App Service Managed Certificate  

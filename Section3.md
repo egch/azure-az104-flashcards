@@ -1,8 +1,10 @@
 # Section 3 - Deploy and Manage Azure compute resources
 [Azure Web Apps](WebApps.md)
 ## Availability Set
-- fault domains
-- update domains
+- fault domains (max 3)
+- update domains (max 20)
+
+Availability set can be specified only at the VM creation time.
 ## Azure Bastion
 TBD
 
@@ -54,12 +56,19 @@ add-windowsfeature web-server -includeallsubfeature
 ```
 
 
-## VM Availability Zones - 49
+## VM Availability Zones
 Availability Zones are unique physical locations within an Azure region. Zone-redundant services replicate your applications and data across Availability Zones to protect from single-points-of-failure. With Availability Zones, Azure offers industry best **99.99%** VM uptime SLA. :bangbang:
 
 There aint't additional cost to add avaiability zones but there is bandwidth cost.
+## VM SLA
+|  Type | SLA | 
+|:----------|-------------:|
+| single - SSD | 99,5% |
+| single - premium SSD  | 99,9% |
+| Availability set  | 99,95% |
+| Availability Zones  | 99,99% |
 
-## VM Scale Set - 52
+## VM Scale Set 
 Orchestration mode:
 - Uniform
 - Flexible
