@@ -11,16 +11,21 @@ App Service Environments_
 ## Azure Policies
 ### Example
 - Require a tag and its value on resources
-- Assign/Scope:
-  - Management Group
-  - subscription
-  - resource group
 - Exclusions
 - Tag name/value
 
 Policies are inherited 
 
 Can you assign the Azure Policy exclusion at the Tenant Root Group Level? **NO** :bangbang:
+
+### Policy assigment
+| Level  |      Policy   | 
+|----------|:-------------:|
+| Tenant |  :x: | 
+| Mgmt group|    :white_check_mark:   |  
+| Subscription|    :white_check_mark:  |  
+| Resource Group|    :white_check_mark:   |  
+| Resource|    :x:   |  
 
 
 ### Not allowed resource types 
@@ -31,14 +36,7 @@ Not allowed resource types (Deny): Prevents a list of resource types from being 
 If I try to create a new resource this needs to be compliant.
 On the existing resources they will be marked as not policiy compliant.
 
-### Policy assigment
-| Level  |      Policy   | 
-|----------|:-------------:|
-| Tenant |  :x: | 
-| Mgmt group|    :white_check_mark:   |  
-| Subscription|    :white_check_mark:  |  
-| Resource Group|    :white_check_mark:   |  
-| Resource|    :x:   |  
+
 
 ## Administrative Units
 - MS Graph

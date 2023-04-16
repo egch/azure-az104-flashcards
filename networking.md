@@ -86,7 +86,7 @@ Nothing possible from external :bangbang:
 
 ### LB Settings
 - Public IP Frontend
-- Backeend pool
+- Backend pool
 - Health Probe
 - Load Balancing Rules
 

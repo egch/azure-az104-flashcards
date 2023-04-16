@@ -16,7 +16,9 @@ Azure Disks
 ## Disk Encryption
 * ADE - Azure Disk Encryption.
 
-* ADE uses BitLocker for encryption of Windows VMs, and the dm-crypt feature for Linux VMs.
+* ADE encryption:
+  * BitLocker for encryption of Windows VMs
+  * dm-crypt feature for Linux VMs.
 
 * SSE with PMK - Server Side Encryption with Platform Manager Key.
 

@@ -6,7 +6,9 @@
 
 Availability set can be specified only at the VM creation time.
 ## Azure Bastion
-TBD
+Azure Bastion requires a dedicated subnet: **AzureBastionSubnet**. You must create this subnet in the same virtual network that you want to deploy Azure Bastion to. The subnet must have the following configuration:
+
+
 
 ## VM creation
 I cannot create a VM in a region different from the region of the corresponding virtual network. 
