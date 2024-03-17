@@ -1,7 +1,7 @@
 # azure-az104-flashcards
 Exam AZ-104: Microsoft Azure Administrator - flashcards
 ## Badge
-https://www.credly.com/badges/c00e7e1c-9902-46e9-9b33-c4ec3fd456b2/public_url
+[Microsoft Certified: Azure Administrator Associate](https://www.credly.com/badges/c00e7e1c-9902-46e9-9b33-c4ec3fd456b2/public_url)
 ## Chapters
 
 [Deploy and Manage Azure compute resources](Section3.md)
